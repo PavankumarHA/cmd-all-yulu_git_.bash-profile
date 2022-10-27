@@ -1,0 +1,120 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;\red253\green128\blue8;\red0\green0\blue0;\red33\green255\blue6;
+}
+{\*\expandedcolortbl;;\cssrgb\c100000\c57637\c0;\cssrgb\c0\c0\c0;\cssrgb\c0\c97680\c0;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\cf2 Solve conflict in git\
+\
+If conflict is came then merge into branch  and 1st delete the branch like release/dev and push the code again\cf0 \
+\
+\
+\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$\cf2  
+\f1\b \cf3 git checkout YUL-746-log-location\cf0 \
+
+\f0\b0 error: Your local changes to the following files would be overwritten by checkout:\
+        api/controllers/v3/JourneysController.js\
+Please commit your changes or stash them before you switch branches.\
+Aborting\
+\
+\
+\
+// g\cf2 it checkout  YUL-746-log-location\cf3  / if this one is not work then give this one to delete\cf2  \cf0 g\cf2 it checkout -f YUL-746-log-location\
+\
+\
+\cf0 \
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f1\b \cf3 git checkout -f YUL-746-log-location
+\f0\b0 \cf0 \
+Switched to branch 'YUL-746-log-location'\
+\
+\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f1\b \cf3 git branch --delete release/dev
+\f0\b0 \cf0 \
+error: The branch 'release/dev' is not fully merged.\
+If you are sure you want to delete it, run 'git branch -D release/dev'.\
+\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f1\b \cf3 git branch -D release/dev\
+
+\f0\b0 \cf0 Deleted branch release/dev (was 2d95c6f20).\
+\
+\
+\
+\cf4 Git push origin release/dev.\cf0   // then push code to the dev\
+\
+\
+
+\f1\b /////// right one till end\
+\
+
+\f0\b0 // first check to ur branch to release/dev and pull the request then u can merge\
+// ofter that u can push code to release/dev\
+// push the code  ofter merge \
+//push the code not your local branch push the release/dev branch\
+\
+\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f1\b git pull origin language-change-locale
+\f0\b0 \
+From bitbucket.org:yulubike/yulu-customer-app\
+ * branch                language-change-locale -> FETCH_HEAD\
+Already up to date.\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f1\b git checkout release/dev
+\f0\b0 \
+Switched to branch 'release/dev'\
+Your branch is behind 'origin/release/dev' by 28 commits, and can be fast-forwarded.\
+  (use "git pull" to update your local branch)\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f1\b git pull origin release/dev
+\f0\b0 \
+From bitbucket.org:yulubike/yulu-customer-app\
+ * branch                release/dev -> FETCH_HEAD\
+Updating 8d285404b..1e7d28fb3\
+Fast-forward\
+ api/controllers/v3/ChatBotController.js  |  6 ++++++\
+ api/controllers/v3/HomepageController.js | 59 +++++++++++++++++++++++++++++++----------------------------\
+ api/controllers/v3/LTRController.js      | 37 ++++++++++++++++++++++---------------\
+ api/models/ChatBot.js                    |  2 +-\
+ api/models/LTR.js                        | 49 +++++++++++++++++++++++++++++++++++++++----------\
+ api/services/QueryPromiseService.js      |  2 +-\
+ config/i18n.js                           |  4 ++--\
+ 7 files changed, 102 insertions(+), 57 deletions(-)\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f1\b git merge language-change-locale
+\f0\b0 \
+Auto-merging api/controllers/v3/LTRController.js\
+CONFLICT (content): Merge conflict in api/controllers/v3/LTRController.js\
+Auto-merging api/controllers/v3/UsersController.js\
+Auto-merging api/controllers/v4/BillingController.js\
+Auto-merging config/i18n.js\
+CONFLICT (content): Merge conflict in config/i18n.js\
+Automatic merge failed; fix conflicts and then commit the result.\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f1\b git commit -m "Added locale changes in dev"
+\f0\b0 \
+[release/dev 475a80fdc] Added locale changes in dev\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f1\b git push origin release/dev
+\f0\b0 \
+Enumerating objects: 31, done.\
+Counting objects: 100% (31/31), done.\
+Delta compression using up to 2 threads\
+Compressing objects: 100% (10/10), done.\
+Writing objects: 100% (11/11), 2.62 KiB | 1.31 MiB/s, done.\
+Total 11 (delta 8), reused 0 (delta 0), pack-reused 0\
+remote: \
+remote: Create pull request for release/dev:\
+remote:   https://bitbucket.org/yulubike/yulu-customer-app/pull-requests/new?source=release/dev&t=1\
+remote: \
+To bitbucket.org:yulubike/yulu-customer-app.git\
+   1e7d28fb3..475a80fdc  release/dev -> release/dev\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f1\b node app.js}

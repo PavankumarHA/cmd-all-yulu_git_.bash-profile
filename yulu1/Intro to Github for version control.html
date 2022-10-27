@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://ourcodingclub.github.io/tutorials/git/ -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.osano-cm-button,.osano-cm--borderless .osano-cm-button{border:none;box-shadow:1px 1px 3px rgba(100,100,100,0.7)}.osano-cm-button{background-color:rgba(243,228,126,0.9);border-color:#111010;color:#111010}.osano-cm-button:focus,.osano-cm-button:hover{background:rgba(240,220,89,0.9);outline:none}.osano-cm-toggle__switch{background-color:#ddd8d8}.osano-cm-toggle__switch::after{background-color:#fff}.osano-cm-toggle__checkbox:disabled+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:focus:disabled+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover:disabled+.osano-cm-toggle__switch{background-color:#a29494}.osano-cm-toggle__checkbox:disabled+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:focus:disabled+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover:disabled+.osano-cm-toggle__switch::after{background-color:#bfbfbf}.osano-cm-toggle__checkbox:focus+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover+.osano-cm-toggle__switch{background-color:#cac2c2}.osano-cm-toggle__checkbox:focus+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover+.osano-cm-toggle__switch::after{background-color:#ebebeb}.osano-cm-toggle__checkbox:checked+.osano-cm-toggle__switch{background-color:#98d9c9}.osano-cm-toggle__checkbox:checked+.osano-cm-toggle__switch::after{background-color:#f4f4f4}.osano-cm-toggle__checkbox:disabled:checked+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:disabled:checked:focus+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:disabled:checked:hover+.osano-cm-toggle__switch{background-color:#41b095}.osano-cm-toggle__checkbox:disabled:checked+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:disabled:checked:focus+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:disabled:checked:hover+.osano-cm-toggle__switch::after{background-color:#b4b4b4}.osano-cm-toggle__checkbox:focus:checked+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover:checked+.osano-cm-toggle__switch{background-color:#7aceb9}.osano-cm-toggle__checkbox:focus:checked+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover:checked+.osano-cm-toggle__switch::after{background-color:#e0e0e0}.osano-cm-deny{background:rgba(243,228,126,0.9);color:#151414}.osano-cm-link,.osano-cm-disclosure__toggle{color:#b5e5e1}.osano-cm-link:hover,.osano-cm-disclosure__toggle:hover,.osano-cm-link:active,.osano-cm-disclosure__toggle:active{color:#b5e5e1;outline:none}.osano-cm-link:focus,.osano-cm-disclosure__toggle:focus{color:#97dad5;outline:none}.osano-cm-disclosure__list:first-of-type::after{background-color:#b5e5e1}.osano-cm-window{font-size:16px;font-family:Helvetica, Arial, 'Hiragino Sans GB', STXihei, 'Microsoft YaHei', 'WenQuanYi Micro Hei', Hind, 'MS Gothic', 'Apple SD Gothic Neo', 'NanumBarunGothic', sans-serif;font-smooth:always;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothingz:auto;display:block;z-index:2147483638;line-height:1;width:100%}.osano-cm-button,.osano-cm--borderless .osano-cm-button{border:none;box-shadow:1px 1px 3px rgba(100,100,100,0.7)}.osano-cm-button{background-color:rgba(243,228,126,0.9);border-color:#111010;color:#111010}.osano-cm-button:focus,.osano-cm-button:hover{background:rgba(240,220,89,0.9);outline:none}.osano-cm-toggle__switch{background-color:#ddd8d8}.osano-cm-toggle__switch::after{background-color:#fff}.osano-cm-toggle__checkbox:disabled+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:focus:disabled+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover:disabled+.osano-cm-toggle__switch{background-color:#a29494}.osano-cm-toggle__checkbox:disabled+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:focus:disabled+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover:disabled+.osano-cm-toggle__switch::after{background-color:#bfbfbf}.osano-cm-toggle__checkbox:focus+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover+.osano-cm-toggle__switch{background-color:#cac2c2}.osano-cm-toggle__checkbox:focus+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover+.osano-cm-toggle__switch::after{background-color:#ebebeb}.osano-cm-toggle__checkbox:checked+.osano-cm-toggle__switch{background-color:#98d9c9}.osano-cm-toggle__checkbox:checked+.osano-cm-toggle__switch::after{background-color:#f4f4f4}.osano-cm-toggle__checkbox:disabled:checked+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:disabled:checked:focus+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:disabled:checked:hover+.osano-cm-toggle__switch{background-color:#41b095}.osano-cm-toggle__checkbox:disabled:checked+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:disabled:checked:focus+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:disabled:checked:hover+.osano-cm-toggle__switch::after{background-color:#b4b4b4}.osano-cm-toggle__checkbox:focus:checked+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover:checked+.osano-cm-toggle__switch{background-color:#7aceb9}.osano-cm-toggle__checkbox:focus:checked+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover:checked+.osano-cm-toggle__switch::after{background-color:#e0e0e0}.osano-cm-deny{background:rgba(243,228,126,0.9);color:#151414}.osano-cm-link,.osano-cm-disclosure__toggle{color:#b5e5e1}.osano-cm-link:hover,.osano-cm-disclosure__toggle:hover,.osano-cm-link:active,.osano-cm-disclosure__toggle:active{color:#b5e5e1;outline:none}.osano-cm-link:focus,.osano-cm-disclosure__toggle:focus{color:#97dad5;outline:none}.osano-cm-disclosure__list:first-of-type::after{background-color:#b5e5e1}.osano-cm-link{cursor:pointer;text-decoration:underline;transition-duration:200ms;transition-property:color;transition-timing-function:ease-out}.osano-cm-button,.osano-cm--borderless .osano-cm-button{border:none;box-shadow:1px 1px 3px rgba(100,100,100,0.7)}.osano-cm-button{background-color:rgba(243,228,126,0.9);border-color:#111010;color:#111010}.osano-cm-button:focus,.osano-cm-button:hover{background:rgba(240,220,89,0.9);outline:none}.osano-cm-toggle__switch{background-color:#ddd8d8}.osano-cm-toggle__switch::after{background-color:#fff}.osano-cm-toggle__checkbox:disabled+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:focus:disabled+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover:disabled+.osano-cm-toggle__switch{background-color:#a29494}.osano-cm-toggle__checkbox:disabled+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:focus:disabled+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover:disabled+.osano-cm-toggle__switch::after{background-color:#bfbfbf}.osano-cm-toggle__checkbox:focus+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover+.osano-cm-toggle__switch{background-color:#cac2c2}.osano-cm-toggle__checkbox:focus+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover+.osano-cm-toggle__switch::after{background-color:#ebebeb}.osano-cm-toggle__checkbox:checked+.osano-cm-toggle__switch{background-color:#98d9c9}.osano-cm-toggle__checkbox:checked+.osano-cm-toggle__switch::after{background-color:#f4f4f4}.osano-cm-toggle__checkbox:disabled:checked+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:disabled:checked:focus+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:disabled:checked:hover+.osano-cm-toggle__switch{background-color:#41b095}.osano-cm-toggle__checkbox:disabled:checked+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:disabled:checked:focus+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:disabled:checked:hover+.osano-cm-toggle__switch::after{background-color:#b4b4b4}.osano-cm-toggle__checkbox:focus:checked+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover:checked+.osano-cm-toggle__switch{background-color:#7aceb9}.osano-cm-toggle__checkbox:focus:checked+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover:checked+.osano-cm-toggle__switch::after{background-color:#e0e0e0}.osano-cm-deny{background:rgba(243,228,126,0.9);color:#151414}.osano-cm-link,.osano-cm-disclosure__toggle{color:#b5e5e1}.osano-cm-link:hover,.osano-cm-disclosure__toggle:hover,.osano-cm-link:active,.osano-cm-disclosure__toggle:active{color:#b5e5e1;outline:none}.osano-cm-link:focus,.osano-cm-disclosure__toggle:focus{color:#97dad5;outline:none}.osano-cm-disclosure__list:first-of-type::after{background-color:#b5e5e1}.osano-cm-button{border-width:thin;border-style:solid;border-radius:0.25em;font-weight:bold;font-size:1em;padding:0.5em 0.75em;margin:0.125em;line-height:1;flex:1 1 auto;min-width:6em;cursor:pointer;transition-duration:200ms;transition-property:background-color;transition-timing-function:ease-out;flex:none;margin:0.125em auto;width:80%}@media screen and (min-width: 768px){.osano-cm-button{flex:1 1 auto;width:auto;margin:0.25em 0.5em}}.osano-cm-button,.osano-cm--borderless .osano-cm-button{border:none;box-shadow:1px 1px 3px rgba(100,100,100,0.7)}.osano-cm-button{background-color:rgba(243,228,126,0.9);border-color:#111010;color:#111010}.osano-cm-button:focus,.osano-cm-button:hover{background:rgba(240,220,89,0.9);outline:none}.osano-cm-toggle__switch{background-color:#ddd8d8}.osano-cm-toggle__switch::after{background-color:#fff}.osano-cm-toggle__checkbox:disabled+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:focus:disabled+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover:disabled+.osano-cm-toggle__switch{background-color:#a29494}.osano-cm-toggle__checkbox:disabled+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:focus:disabled+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover:disabled+.osano-cm-toggle__switch::after{background-color:#bfbfbf}.osano-cm-toggle__checkbox:focus+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover+.osano-cm-toggle__switch{background-color:#cac2c2}.osano-cm-toggle__checkbox:focus+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover+.osano-cm-toggle__switch::after{background-color:#ebebeb}.osano-cm-toggle__checkbox:checked+.osano-cm-toggle__switch{background-color:#98d9c9}.osano-cm-toggle__checkbox:checked+.osano-cm-toggle__switch::after{background-color:#f4f4f4}.osano-cm-toggle__checkbox:disabled:checked+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:disabled:checked:focus+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:disabled:checked:hover+.osano-cm-toggle__switch{background-color:#41b095}.osano-cm-toggle__checkbox:disabled:checked+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:disabled:checked:focus+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:disabled:checked:hover+.osano-cm-toggle__switch::after{background-color:#b4b4b4}.osano-cm-toggle__checkbox:focus:checked+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover:checked+.osano-cm-toggle__switch{background-color:#7aceb9}.osano-cm-toggle__checkbox:focus:checked+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover:checked+.osano-cm-toggle__switch::after{background-color:#e0e0e0}.osano-cm-deny{background:rgba(243,228,126,0.9);color:#151414}.osano-cm-link,.osano-cm-disclosure__toggle{color:#b5e5e1}.osano-cm-link:hover,.osano-cm-disclosure__toggle:hover,.osano-cm-link:active,.osano-cm-disclosure__toggle:active{color:#b5e5e1;outline:none}.osano-cm-link:focus,.osano-cm-disclosure__toggle:focus{color:#97dad5;outline:none}.osano-cm-disclosure__list:first-of-type::after{background-color:#b5e5e1}.osano-cm-toggle{align-items:center;display:flex;justify-content:flex-start;margin:0.25em 0;position:relative}.osano-cm-toggle__label{margin:0 0.5em}.osano-cm-toggle__switch{color:transparent;line-height:0;text-indent:-9999px;width:44px;height:22px;display:block;border-radius:10px;position:relative;transition-duration:200ms;transition-property:background-color;transition-timing-function:ease-out}.osano-cm-toggle__switch:hover{cursor:pointer}.osano-cm-toggle__switch::after{content:'';position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:9px;transition:0.3s}.osano-cm-toggle__switch::after:active{width:26px;transition:0.1s}.osano-cm-toggle__checkbox{height:1px;width:1px;margin:-1px;opacity:0;position:absolute}.osano-cm-toggle__checkbox:checked+.osano-cm-toggle__switch::after{left:calc(100% - 2px);transform:translateX(-100%)}.osano-cm-toggle__checkbox:disabled{cursor:default}.osano-cm-toggle__checkbox:disabled+.osano-cm-toggle__switch{cursor:default}.osano-cm-dialog{box-sizing:border-box;font-size:1em;line-height:1.25;align-items:center;background:rgba(76,60,83,0.9);color:#fff;position:fixed;z-index:2147483637;padding:1.5em;overflow:auto;transition-property:opacity, visibility;transition-duration:700ms, 700ms;transition-delay:0ms, 0ms;visibility:visible;display:flex;flex-direction:column;box-sizing:border-box;right:0;left:0;bottom:0;box-shadow:0 4px 8px rgba(0,0,0,0.9)}.osano-cm-dialog--hidden{opacity:0;transition-delay:0ms, 700ms;visibility:hidden}@media screen and (min-width: 768px){.osano-cm-dialog{flex-direction:row}}.osano-cm-dialog-list{margin:0.5em 0 0 0;padding:0;display:flex;flex-direction:column;flex-wrap:wrap;justify-content:flex-start;margin:0.75em auto}@media screen and (min-width: 376px){.osano-cm-dialog-list{flex-direction:row}}@media screen and (min-width: 768px){.osano-cm-dialog-list{margin:0.5em 0 0 auto}}.osano-cm-dialog-list__item{display:flex;margin-top:0;margin-right:0.5em}.osano-cm-dialog-list__item:last-child{margin-bottom:0}.osano-cm-dialog-list__label{margin-left:0.375em;white-space:nowrap;padding-top:0}.osano-cm-dialog__content{flex:5;margin-bottom:0.25em}.osano-cm-storage-policy{display:inline-block;padding:0 0.125em;text-transform:capitalize}.osano-cm-buttons{display:flex;flex-wrap:wrap;flex:1;justify-content:flex-end;width:100%;margin:0}@media screen and (min-width: 768px){.osano-cm-buttons{width:auto;margin:0 0 0 0.5em}}.osano-cm-widget{cursor:pointer;position:fixed;background:none;border:none;bottom:12px;z-index:2147483636;width:40px;height:40px;opacity:0.9;outline:none;padding:0;transition-property:transform, opacity, visibility;transition-duration:100ms, 400ms, 0ms;transition-delay:0ms, 0ms, 0ms;visibility:visible;right:12px}.osano-cm-widget:focus,.osano-cm-widget:hover{opacity:1;transform:scale(1.1)}.osano-cm-widget--hidden{opacity:0;transition-delay:0ms, 0ms, 400ms;visibility:hidden}.osano-cm-widget--hidden:focus,.osano-cm-widget--hidden:hover{opacity:0;transform:scale(1)}.osano-cm-info-dialog-wrapper{position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.458824);z-index:2147483638;transition-property:opacity, visibility;transition-duration:200ms, 0ms;transition-delay:0ms, 0ms;visibility:visible}.osano-cm-info-dialog-wrapper--hidden{opacity:0;transition-delay:0ms, 200ms;visibility:hidden}.osano-cm-info__button{font-size:0.875em;width:100%;margin:1em 0 0}.osano-cm-info-dialog{box-sizing:border-box;position:fixed;top:0;background:rgba(47,47,50,0.87);color:#f1f5f4;max-width:20em;height:100vh;transition-property:transform;transition-duration:400ms;padding:1em 0.75em;box-shadow:0 0 2px 2px #ccc;overflow-x:hidden;overflow-y:auto;right:0;transform:translate(100%, 0)}.osano-cm-info-dialog--open{transform:translate(0, 0)}.osano-cm-info-dialog__header{margin:0.25em 0 1em}.osano-cm-info-dialog__header-title{font-size:1em;margin:0 0 1em 0;padding:0.25em 0}.osano-cm-info-dialog__header-description{font-size:0.75em;line-height:1.375}.osano-cm-info-dialog .osano-cm-toggle{flex-direction:row-reverse;justify-content:space-between}.osano-cm-info-dialog .osano-cm-toggle__label{font-size:0.875em;margin:0}.osano-cm-info-dialog-close{cursor:pointer;float:right;text-decoration:none;border:none;padding:0;transition:transform 200ms ease-out;transform:rotate(0deg);margin:0;outline:none}.osano-cm-info-dialog-close .x{transition-property:fill;transition-duration:200ms;transition-timing-function:ease-out;fill:#f1f5f4}.osano-cm-info-dialog-close:focus{transform:rotate(90deg)}.osano-cm-info-dialog-close:focus .x{fill:#fff}.osano-cm-info-dialog-close:hover{transform:rotate(90deg)}.osano-cm-info-dialog-close:hover .x{fill:#fff}.osano-cm-info-list{list-style-type:none;margin:0;padding:0}.osano-cm-info-list__item{margin:1em 0 0;padding:0}.osano-cm-info-list__item-description{font-size:0.75em;font-weight:300;line-height:1.375;margin:1em 0 0}.osano-cm-powered-by{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:1em 0 0}.osano-cm-powered-by__link{font-size:0.625em;text-decoration:none}.osano-cm-button,.osano-cm--borderless .osano-cm-button{border:none;box-shadow:1px 1px 3px rgba(100,100,100,0.7)}.osano-cm-button{background-color:rgba(243,228,126,0.9);border-color:#111010;color:#111010}.osano-cm-button:focus,.osano-cm-button:hover{background:rgba(240,220,89,0.9);outline:none}.osano-cm-toggle__switch{background-color:#ddd8d8}.osano-cm-toggle__switch::after{background-color:#fff}.osano-cm-toggle__checkbox:disabled+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:focus:disabled+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover:disabled+.osano-cm-toggle__switch{background-color:#a29494}.osano-cm-toggle__checkbox:disabled+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:focus:disabled+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover:disabled+.osano-cm-toggle__switch::after{background-color:#bfbfbf}.osano-cm-toggle__checkbox:focus+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover+.osano-cm-toggle__switch{background-color:#cac2c2}.osano-cm-toggle__checkbox:focus+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover+.osano-cm-toggle__switch::after{background-color:#ebebeb}.osano-cm-toggle__checkbox:checked+.osano-cm-toggle__switch{background-color:#98d9c9}.osano-cm-toggle__checkbox:checked+.osano-cm-toggle__switch::after{background-color:#f4f4f4}.osano-cm-toggle__checkbox:disabled:checked+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:disabled:checked:focus+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:disabled:checked:hover+.osano-cm-toggle__switch{background-color:#41b095}.osano-cm-toggle__checkbox:disabled:checked+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:disabled:checked:focus+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:disabled:checked:hover+.osano-cm-toggle__switch::after{background-color:#b4b4b4}.osano-cm-toggle__checkbox:focus:checked+.osano-cm-toggle__switch,.osano-cm-toggle__checkbox:hover:checked+.osano-cm-toggle__switch{background-color:#7aceb9}.osano-cm-toggle__checkbox:focus:checked+.osano-cm-toggle__switch::after,.osano-cm-toggle__checkbox:hover:checked+.osano-cm-toggle__switch::after{background-color:#e0e0e0}.osano-cm-deny{background:rgba(243,228,126,0.9);color:#151414}.osano-cm-link,.osano-cm-disclosure__toggle{color:#b5e5e1}.osano-cm-link:hover,.osano-cm-disclosure__toggle:hover,.osano-cm-link:active,.osano-cm-disclosure__toggle:active{color:#b5e5e1;outline:none}.osano-cm-link:focus,.osano-cm-disclosure__toggle:focus{color:#97dad5;outline:none}.osano-cm-disclosure__list:first-of-type::after{background-color:#b5e5e1}.osano-cm-script-disclosure__title,.osano-cm-cookie-disclosure__title{display:block;flex:0 1 30%;clear:both;font-weight:bold}.osano-cm-script-disclosure__description,.osano-cm-cookie-disclosure__description{font-size:0.875em;margin:0 0 0.5em;flex:0 1 70%}.osano-cm-disclosure{font-size:0.75em;margin:0 -1.5em 0;padding:1.5em 1.5em 0}.osano-cm-disclosure:not([open]),.osano-cm-disclosure--collapse{border-bottom:1px solid rgba(0,0,0,0.1);margin-bottom:0;padding-bottom:1em}.osano-cm-disclosure[open]{border-bottom:none;margin-bottom:0;padding-bottom:0}.osano-cm-disclosure__list{line-height:1.25;list-style:none;margin:0 -1.5em 0;padding:1.25em 1.5em 1em;background-color:rgba(0,0,0,0.1)}.osano-cm-disclosure__list:empty{border:none;padding:0 1.5em}.osano-cm-disclosure__list:first-of-type{margin-top:1em;padding:1.25em 1.5em 1em}.osano-cm-disclosure__list:first-of-type::after{content:'';display:block;transform:translate(0, -50%);width:1em;height:1em;border-radius:100%;animation-name:osano-load-scale;animation-duration:1s;animation-iteration-count:infinite;animation-timing-function:ease-in-out}.osano-cm-disclosure__list:first-of-type:empty{padding:1.75em 1.5em 0.75em}.osano-cm-disclosure__list:not(:first-of-type):not(:empty){border-top:1px solid rgba(0,0,0,0.1)}.osano-cm-disclosure__list:empty+.osano-cm-disclosure__list:not(:empty){border:none;padding:0 1.5em}.osano-cm-disclosure__list:not(:empty) ~ .osano-cm-disclosure__list:empty+.osano-cm-disclosure__list:not(:empty){border-top:1px solid rgba(0,0,0,0.1)}.osano-cm-disclosure__list-item{line-height:1.25}.osano-cm-disclosure__list-item:not(:first-of-type){border-top:1px solid rgba(0,0,0,0.1);margin:1em -1.25em 0;padding:1em 1.25em 0}.osano-cm-disclosure__toggle{cursor:pointer;line-height:1.25;position:relative}.osano-cm-disclosure--loaded .osano-cm-disclosure__list::after{content:none}.osano-cm-disclosure--collapse .osano-cm-disclosure__list::after,.osano-cm-disclosure:not([open]) .osano-cm-disclosure__list::after{content:none}.osano-cm-script-disclosure,.osano-cm-cookie-disclosure{display:flex;flex-wrap:wrap;margin:0}@keyframes osano-load-scale{0%{transform:translate(0, -50%) scale(0)}100%{transform:translate(0, -50%) scale(1);opacity:0}}
+</style>
+    	
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Intro to Github for version control</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS -->
+<link rel="stylesheet" href="./Intro to Github for version control_files/main.css">
+<link rel="stylesheet" href="./Intro to Github for version control_files/owl.carousel.css">
+<link rel="stylesheet" href="./Intro to Github for version control_files/ionicons.min.css">
+<link rel="stylesheet" href="./Intro to Github for version control_files/font-awesome.min.css">
+<link rel="stylesheet" href="./Intro to Github for version control_files/animate.css">
+
+
+<!-- JS -->
+<script src="./Intro to Github for version control_files/osano.js"></script>
+<script async="" src="./Intro to Github for version control_files/analytics.js"></script><script src="./Intro to Github for version control_files/jquery-1.12.4.js"></script>
+<script src="./Intro to Github for version control_files/jquery-ui.js"></script>
+<script src="./Intro to Github for version control_files/accordion.js"></script>
+<script src="./Intro to Github for version control_files/owl.carousel.min.js"></script>
+<script src="./Intro to Github for version control_files/jquery.counterup.js"></script>
+<script src="./Intro to Github for version control_files/waypoints.min.js"></script>
+<script src="./Intro to Github for version control_files/ticker.js"></script>
+<script src="./Intro to Github for version control_files/bootstrap.min.js"></script>
+<script src="./Intro to Github for version control_files/owl.carousel.js"></script>
+<script src="./Intro to Github for version control_files/owl.carousel.init.js"></script>
+	</head>
+	<body><div class="osano-cm-window"><div role="dialog" aria-live="polite" aria-label="Consent Manager by Osano" aria-describedby="osano-id-cm-dialog" class="osano-cm-dialog osano-cm-dialog--hidden">
+      <!--googleoff: all-->
+      <div class="osano-cm-dialog__content osano-cm-content">
+        <span id="osano-id-cm-dialog" class="osano-cm-content__message osano-cm-message">This website stores data such as cookies to enable important site functionality including analytics, targeting, and personalization. By remaining on this web site you indicate your consent.</span>
+        <a href="https://ourcodingclub.github.io/privacy" class="osano-cm-content__link osano-cm-link osano-cm-storage-policy" target="_blank">data storage policy</a>
+        
+      </div>
+      
+      <!--googleon: all-->
+  </div><button class="osano-cm-widget" title="Storage Preferences" aria-label="Storage Preferences">
+    <svg width="40" height="40" viewBox="0 0 71.85 72.23" xmlns="http://www.w3.org/2000/svg"><path d="m67.6 36.73a6.26 6.26 0 0 1 -3.2-2.8 5.86 5.86 0 0 0 -5.2-3.1h-.3a11 11 0 0 1 -11.4-9.5 6 6 0 0 1 -.1-1.4 9.2 9.2 0 0 1 .4-2.9 8.65 8.65 0 0 0 .2-1.6 5.38 5.38 0 0 0 -1.9-4.3 7.3 7.3 0 0 1 -2.5-5.5 3.91 3.91 0 0 0 -3.5-3.9 36.46 36.46 0 0 0 -15 1.5 33.14 33.14 0 0 0 -22.1 22.7 35.62 35.62 0 0 0 -1.5 10.2 34.07 34.07 0 0 0 4.8 17.6.75.75 0 0 0 .07.12c.11.17 1.22 1.39 2.68 3-.36.47 5.18 6.16 5.65 6.52a34.62 34.62 0 0 0 55.6-21.9 4.38 4.38 0 0 0 -2.7-4.74z" fill="#fff" stroke="#29246a" stroke-width="3"></path><path d="m68 41.13a32.37 32.37 0 0 1 -52 20.5l-2-1.56c-2.5-3.28-5.62-7.15-5.81-7.44a32 32 0 0 1 -4.5-16.5 34.3 34.3 0 0 1 1.4-9.6 30.56 30.56 0 0 1 20.61-21.13 33.51 33.51 0 0 1 14.1-1.4 1.83 1.83 0 0 1 1.6 1.8 9.38 9.38 0 0 0 3.3 7.1 3.36 3.36 0 0 1 1.2 2.6 3.37 3.37 0 0 1 -.1 1 12.66 12.66 0 0 0 -.5 3.4 9.65 9.65 0 0 0 .1 1.7 13 13 0 0 0 10.5 11.2 16.05 16.05 0 0 0 3.1.2 3.84 3.84 0 0 1 3.5 2 10 10 0 0 0 4.1 3.83 2 2 0 0 1 1.4 2z" fill="#fff" stroke="#29246a" stroke-width="3"></path><g fill="#37cd8f"><path d="m26.6 31.43a5.4 5.4 0 1 1 5.4-5.43 5.38 5.38 0 0 1 -5.33 5.43z"></path><path d="m25.2 53.13a5.4 5.4 0 1 1 5.4-5.4 5.44 5.44 0 0 1 -5.4 5.4z"></path><path d="m47.9 52.33a5.4 5.4 0 1 1 5.4-5.4 5.32 5.32 0 0 1 -5.24 5.4z"></path></g></svg>
+  </button><div class="osano-cm-info-dialog-wrapper osano-cm-info-dialog-wrapper--hidden">
+    <div class="osano-cm-info-dialog">
+      <div class="osano-cm-info-dialog__header">
+        <button class="osano-cm-info-dialog-close" tabindex="0">
+          <svg aria-role="button" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25 25">
+              <title>Close Icon</title>
+              <polygon class="x" points="25 0.71 24.29 0 12.5 11.79 0.71 0 0 0.71 11.79 12.5 0 24.29 0.71 25 12.5 13.21 24.29 25 25 24.29 13.21 12.5 25 0.71"></polygon>
+          </svg>
+        </button>
+        <p class="osano-cm-info-dialog__header-title">Storage Preferences</p>
+        <p class="osano-cm-info-dialog__header-description">When you visit web sites, they may store or retrieve data in your web browser. This storage is often necessary for basic functionality of the web site or the storage may be used for the purposes of marketing, analytics, and personalization of the web site such as storing your preferences. Privacy is important to us so you have the option of disabling certain types of storage that may not be necessary to the basic functioning of the web site. Blocking categories may impact your experience on the web site.</p>
+      </div>
+      <ul class="osano-cm-info-list">
+        <li class="osano-cm-info-list__item">
+            
+    <label class="osano-cm-toggle" title="Locked: Please read description." for="a9d14da8-6c3d-4712-adc7-6e52014aa422">
+        <input class="osano-cm-toggle__checkbox" data-category="ESSENTIAL" id="a9d14da8-6c3d-4712-adc7-6e52014aa422" type="checkbox" checked="" disabled="">
+        <span class="osano-cm-toggle__switch"></span>
+        <span class="osano-cm-toggle__label osano-cm-label">Strictly Necessary</span>
+    </label>
+    
+          <div class="osano-cm-description osano-cm-info-list__item-description">
+            Essential in order to enable you to navigate the website and use its features, such as accessing secure areas of the website.
+          </div>
+          <details data-section="ESSENTIAL" class="osano-cm-disclosure osano-cm-disclosure--collapse">
+            <summary class="osano-cm-disclosure__toggle">Disclosure</summary>
+            <ul data-type="cookies" class="osano-cm-disclosure__list"></ul>
+            <ul data-type="scripts" class="osano-cm-disclosure__list"></ul>
+          </details>
+        </li>
+        <li class="osano-cm-info-list__item">
+            
+    <label class="osano-cm-toggle" title="" for="6cb6b9bb-1843-4a75-b9a6-60ce8ecabe35">
+        <input class="osano-cm-toggle__checkbox" data-category="MARKETING" id="6cb6b9bb-1843-4a75-b9a6-60ce8ecabe35" type="checkbox">
+        <span class="osano-cm-toggle__switch"></span>
+        <span class="osano-cm-toggle__label osano-cm-label">Marketing</span>
+    </label>
+    
+          <div class="osano-cm-description osano-cm-info-list__item-description">
+            Used to deliver advertising that is more relevant to you and your interests. They are also used to limit the number of times you see an advertisement as well as help measure the effectiveness of the advertising campaign. They are usually placed by advertising networks with the website operator’s permission.
+          </div>
+          <details data-section="MARKETING" class="osano-cm-disclosure osano-cm-disclosure--collapse">
+            <summary class="osano-cm-disclosure__toggle">Disclosure</summary>
+            <ul data-type="cookies" class="osano-cm-disclosure__list"></ul>
+            <ul data-type="scripts" class="osano-cm-disclosure__list"></ul>
+          </details>
+        </li>
+        <li class="osano-cm-info-list__item">
+            
+    <label class="osano-cm-toggle" title="" for="c56142da-3c32-42d3-9fc3-9c1e6ed5aef0">
+        <input class="osano-cm-toggle__checkbox" data-category="PERSONALIZATION" id="c56142da-3c32-42d3-9fc3-9c1e6ed5aef0" type="checkbox">
+        <span class="osano-cm-toggle__switch"></span>
+        <span class="osano-cm-toggle__label osano-cm-label">Personalization</span>
+    </label>
+    
+          <div class="osano-cm-description osano-cm-info-list__item-description">
+            Allows the website to remember choices you make (such as your user name, language or the region you are in) and provide enhanced, more personal features. For example, a website may be able to provide you with local weather reports or traffic news by storing data about the region in which you are currently located.
+          </div>
+          <details data-section="PERSONALIZATION" class="osano-cm-disclosure osano-cm-disclosure--collapse">
+            <summary class="osano-cm-disclosure__toggle">Disclosure</summary>
+            <ul data-type="cookies" class="osano-cm-disclosure__list"></ul>
+            <ul data-type="scripts" class="osano-cm-disclosure__list"></ul>
+          </details>
+        </li>
+        <li class="osano-cm-info-list__item">
+          
+    <label class="osano-cm-toggle" title="" for="78cb6463-e9d0-4c42-bd27-28660335ec01">
+        <input class="osano-cm-toggle__checkbox" data-category="ANALYTICS" id="78cb6463-e9d0-4c42-bd27-28660335ec01" type="checkbox">
+        <span class="osano-cm-toggle__switch"></span>
+        <span class="osano-cm-toggle__label osano-cm-label">Analytics</span>
+    </label>
+    
+          <div class="osano-cm-description osano-cm-info-list__item-description">
+
+            Provides information about how a web site performs, how each page renders, and whether there are technical issues on the web site to the web site operator. This storage type generally doesn’t collect information that identifies a visitor.
+          </div>
+          <details data-section="ANALYTICS" class="osano-cm-disclosure osano-cm-disclosure--collapse">
+            <summary class="osano-cm-disclosure__toggle">Disclosure</summary>
+            <ul data-type="cookies" class="osano-cm-disclosure__list"></ul>
+            <ul data-type="scripts" class="osano-cm-disclosure__list"></ul>
+          </details>
+        </li>
+        
+      </ul>
+      <button aria-role="button" class="osano-cm-info__button osano-cm-button osano-cm-save">Save</button>
+      <div class="osano-cm-powered-by">
+        <a class="osano-cm-link osano-cm-powered-by__link" href="https://www.osano.com/?utm_campaign=cmp&amp;utm_source=cmp-dialog&amp;utm_medium=drawer">Powered By Osano</a>
+      </div>
+    </div>
+  </div></div>
+		<header class="header">
+	<div class="navigation-bar">
+		<div id="navigation-container">
+			
+				<a class="logo" href="https://ourcodingclub.github.io/">
+  <img src="./Intro to Github for version control_files/logo_hex.svg" alt="Coding Club logo">
+</a>
+
+			
+			<nav>
+				<label for="hamburger">☰</label>
+				<input type="checkbox" id="hamburger">
+				<ul>
+					
+						
+					<li class="item item-nav">
+						<a href="https://ourcodingclub.github.io/">Home</a>
+					</li>
+					
+						
+					<li class="item item-nav">
+						<a href="https://ourcodingclub.github.io/tutorials.html">Tutorials</a>
+					</li>
+					
+						
+					<li class="item item-nav">
+						<a href="https://ourcodingclub.github.io/course.html">Course</a>
+					</li>
+					
+						
+					<li class="item item-nav">
+						<a href="https://ourcodingclub.github.io/team.html">Team</a>
+					</li>
+					
+						
+					<li class="item item-nav">
+						<a href="https://ourcodingclub.github.io/involve.html">Get involved</a>
+					</li>
+					
+						
+					<li class="item item-nav">
+						<a href="https://ourcodingclub.github.io/links.html">Links</a>
+					</li>
+					
+						
+					<li class="item item-nav">
+						<a href="https://ourcodingclub.github.io/contact.html">Contact</a>
+					</li>
+					
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+			
+	<div class="banner" style="background-image: url(/assets/img/banner/slider-bg-pale.jpg)">
+	
+		<h1>Intro to Github for version control</h1>
+		
+			<h3>Keeping track of your code and its many versions</h3>
+		
+	
+</div>
+
+
+
+
+<div class="content">
+	<p class="author">
+		
+			Created by Gergana; updated by Boyan (05 Oct 2021)
+		
+		
+		
+	</p>
+	<hr>
+	<h1 id="tutorial-aims">Tutorial Aims:</h1>
+
+<ol>
+  <li><a href="https://ourcodingclub.github.io/tutorials/git/#version">Get familiar with version control, git and GitHub</a></li>
+  <li><a href="https://ourcodingclub.github.io/tutorials/git/#github2">Create your own repository and project folder structure</a></li>
+  <li><a href="https://ourcodingclub.github.io/tutorials/git/#github3">Sync and interact with your repository through <code class="language-plaintext highlighter-rouge">RStudio</code></a></li>
+  <li><a href="https://ourcodingclub.github.io/tutorials/git/#github4">Sync and interact with your repository through the command line</a></li>
+</ol>
+
+<h1 id="version">1. Get familiar with version control, Git and GitHub</h1>
+
+<h2 id="what-is-version-control">What is version control?</h2>
+
+<p>Version control allows you to keep track of your work and helps you to easily explore the changes you have made, be it data, coding scripts, notes, etc. You are probably already doing some type of version control, if you save multiple files, such as <code class="language-plaintext highlighter-rouge">Dissertation_script_25thFeb.R</code>, <code class="language-plaintext highlighter-rouge">Dissertation_script_26thFeb.R</code>, etc. This approach will leave you with tens or hundreds of similar files, making it rather cumbersome to directly compare different versions, and is not easy to share among collaborators. With version control software such as <a href="https://git-scm.com/">Git</a>, version control is much smoother and easier to implement. Using an online platform like <a href="https://github.com/">Github</a> to store your files means that you have an online back up of your work, which is beneficial for both you and your collaborators.</p>
+
+<p>Git uses the command line to perform more advanced actions and we encourage you to look through the <a href="https://ourcodingclub.github.io/tutorials/git/#github4">extra resources we have added at the end of the tutorial later</a>, to get more comfortable with Git. But until then, here we offer a gentle introduction to syncing RStudio and Github, so you can start using version control in minutes.</p>
+
+<h2 id="what-are-the-benefits-of-using-version-control">What are the benefits of using version control?</h2>
+
+<p>Having a GitHub repo makes it easy for you to keep track of collaborative and personal projects - all files necessary for certain analyses can be held together and people can add in their code, graphs, etc. as the projects develop. Each file on GitHub has a history, making it easy to explore the changes that occurred to it at different time points. You can review other people’s code, add comments to certain lines or the overall document, and suggest changes. For collaborative projects, GitHub allows you to assign tasks to different users, making it clear who is responsible for which part of the analysis. You can also ask certain users to review your code. For personal projects, version control allows you to keep track of your work and easily navigate among the many versions of the files you create, whilst also maintaining an online backup.</p>
+
+<h2 id="how-to-get-started">How to get started</h2>
+
+<p><strong>Please register on the <a href="https://github.com/">Github website</a>.</strong></p>
+
+<p>On your computer, you need to install Git first. The process will depend on your operating system: please follow the instructions below by clicking the relevant button.</p>
+
+<details class="reveal-container">
+  <summary class="reveal">Linux</summary>
+
+  <p>If you are using a Linux distribution, you can usually install Git by running the following command in the Terminal:</p>
+
+  <div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock1">Copy contents</button><pre class="highlight" id="codeblock1"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>git
+</code></pre></div>  </div>
+
+  <p>If this doesn’t work, look up Git installation instructions for your distribution.</p>
+
+</details>
+
+<details class="reveal-container">
+  <summary class="reveal">Windows</summary>
+
+  <p>If you are on a personal Windows machine, download and install <a href="https://git-scm.com/downloads">Git</a> for your operating system. Below are some recommended installation instructions, to keep things simple. However, if you know what these options do, and want to change them to suit you, go ahead:</p>
+
+  <ol>
+    <li>For “Select Components”, check:
+      <ul>
+        <li>“Git Bash Here”</li>
+        <li>“Git GUI Here”</li>
+        <li>“Git LFS (Large File Support)”</li>
+        <li>“Associate .git* …”</li>
+        <li>“Associate .sh …”</li>
+      </ul>
+    </li>
+    <li>When prompted to choose the default editor, pick Notepad or if available, Notepad++ (a free graphical text editor designed for coding you can download <a href="https://notepad-plus-plus.org/">here</a>).</li>
+    <li>For “Adjusting the name of the initial branch in new repositories”, select: “Override the default…” and write in “main”.</li>
+    <li>For “Adjust your PATH environment”, select: “Git from the command line and also…”</li>
+    <li>For “Choose HTTPS transport backend”, select: “Use the OpenSSL library”</li>
+    <li>For “Configuring the line ending conversions”, select: “Checkout Windows-style,…”</li>
+    <li>For “Choose the default behavior of <code class="language-plaintext highlighter-rouge">git pull</code>”, select: “Default (fast-forward or merge)”</li>
+    <li>For “Choose a credential helper”, select: “Git Credential Manager Core”</li>
+    <li>For “Configure the terminal emulator …”, select: “Use MinTTY …”</li>
+    <li>For “Configure extra options”, select:
+      <ul>
+        <li>“Enable file system caching”</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>For any configurations not listed here, select the default option.</p>
+
+</details>
+
+<details class="reveal-container">
+  <summary class="reveal">macOS</summary>
+
+  <p>If you are on a personal Mac machine, install Git via Homebrew, which is a package manager for command line programs on Mac. First, open a terminal, which can be found at <code class="language-plaintext highlighter-rouge">~/Application/Utilities/Terminal.app</code>. Then, copy and paste this line into the terminal and hit “Enter”:</p>
+
+  <div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock2">Copy contents</button><pre class="highlight" id="codeblock2"><code>/usr/bin/ruby <span class="nt">-e</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="si">)</span><span class="s2">"</span>
+</code></pre></div>  </div>
+
+  <p>Now enter the following to install Git:</p>
+
+  <div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock3">Copy contents</button><pre class="highlight" id="codeblock3"><code>brew <span class="nb">install </span>git
+</code></pre></div>  </div>
+
+  <p>Follow any instructions in the terminal window, you may need to enter your Mac’s password or agree to questions by typing <code class="language-plaintext highlighter-rouge">yes</code>.</p>
+
+</details>
+
+<p>The files you put on GitHub will be public (i.e. everyone can see them &amp; suggest changes, but only the people with access to the repository can directly edit and add/remove files). You can also have private repositories on GitHub, which means that only you can see the files. GitHub now offers <a href="https://blog.github.com/2019-01-07-new-year-new-github/">free private repositories as standard</a> with up to three collaborators per repository. They also offer a free education package, with access to software and other perks, you can apply for one using <a href="https://education.github.com/discount_requests/new">this link</a>.</p>
+
+<h2 id="how-does-version-control-work">How does version control work?</h2>
+
+<h3 id="what-is-a-repository">What is a repository?</h3>
+
+<p>You can think of a repository (<em>aka</em> a repo) as a “main folder”, everything associated with a specific project should be kept in a repo for that project. Repos can have folders within them, or just be separate files.</p>
+
+<p>You will have a local copy (on your computer) and an online copy (on GitHub) of all the files in the repository.</p>
+
+<h3 id="the-workflow">The workflow</h3>
+
+<p>The GitHub workflow can be summarised by the “commit-pull-push” mantra.</p>
+
+<ol>
+  <li>Commit
+    <ul>
+      <li>Once you’ve saved your files, you need to commit them - this means the changes you have made to files in your repo will be saved as a version of the repo, and your changes are now ready to go up on GitHub (the online copy of the repository).</li>
+    </ul>
+  </li>
+  <li>Pull
+    <ul>
+      <li>Now, before you send your changes to Github, you need to pull, i.e. make sure you are completely up to date with the latest version of the online version of the files - other people could have been working on them even if you haven’t. You should always pull before you start editing and before you push.</li>
+    </ul>
+  </li>
+  <li>Push
+    <ul>
+      <li>Once you are up to date, you can push your changes - at this point in time your local copy and the online copy of the files will be the same.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Each file on GitHub has a history, so instead of having many files like <code class="language-plaintext highlighter-rouge">Dissertation_1st_May.R</code>, <code class="language-plaintext highlighter-rouge">Dissertation_2nd_May.R</code>, you can have only one and by exploring its history, you can see what it looked at different points in time.</p>
+
+<p>For example, here is the history for a repo with an R script inside it, as viewed on Github. Obviously it took me a while to calculate those model predictions!</p>
+
+<p><img src="./Intro to Github for version control_files/filehistory.png" alt="Github commit history screenshot"></p>
+
+<h1 id="github2">2. Create your own repository and project folder structure</h1>
+
+<p>To make a repository, go to <code class="language-plaintext highlighter-rouge">Repositories/New repository</code> - choose a concise and informative name that has no spaces or funky characters in it. This can be your master repo that holds together past and ongoing research, data, scripts, manuscripts. Later on you might want to have more repositories - e.g. a repository associated with a particular project that you want to make public or a project where you are actively seeking feedback from a wider audience. For now, we will focus on organising and using your main repository that holds the files for all your work. With a free GitHub account, you can use public or private respositories.</p>
+
+<p><img src="./Intro to Github for version control_files/newrepo.png" alt="Github create new repository screenshot"></p>
+
+<p>Let’s create a new private repository. You can call it whatever you like if the name is available.</p>
+
+<p><img src="./Intro to Github for version control_files/newrepo2.png" alt="Github create new repository"></p>
+
+<p><strong>Click on <code class="language-plaintext highlighter-rouge">Initialise repo with a README.md file</code></strong>. It’s common practice for each repository to have a <code class="language-plaintext highlighter-rouge">README.md</code> file, which contains information about the project, the purpose of the repository, as well as any comments on licensing and data sources. Github understands several text formats, including <code class="language-plaintext highlighter-rouge">.txt</code> and <code class="language-plaintext highlighter-rouge">.md</code>. <code class="language-plaintext highlighter-rouge">.md</code> stands for a file written in <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a>. You might have used Markdown before from within <code class="language-plaintext highlighter-rouge">RStudio</code> to create neatly organised reports of your code and its outputs (you can also check out our <a href="https://ourcodingclub.github.io/tutorials/rmarkdown/index.html">Markdown tutorial</a>. You can also use Markdown to write plain text files, for example the file you are reading now was written in Markdown.</p>
+
+<p><strong>We will also create a <code class="language-plaintext highlighter-rouge">.gitignore</code> file</strong>. This file lets Git know what kind of files should not be included in the repository. We’ll have a look at that file in a bit. Tick the box, then search for <strong>R</strong> in the drop-down template (or whatever programming language you will be using for the project).</p>
+
+<p>Once you are ready, click on <strong>Create repository</strong>.</p>
+
+<p><img src="./Intro to Github for version control_files/newrepo3.png" alt="Github create new repository"></p>
+
+<p>Here is how the repository should look:</p>
+
+<p><img src="./Intro to Github for version control_files/github_repo_first_view.png" alt="Github new repository first view"></p>
+
+<p>You can directly edit your <code class="language-plaintext highlighter-rouge">README.md</code> file on Github by clicking on the file and then selecting <code class="language-plaintext highlighter-rouge">Edit this file</code>.</p>
+
+<p><img src="./Intro to Github for version control_files/readme.png" alt="Github edit file screenshot"></p>
+
+<h2 id="exercise-1-write-an-informative-readmemd-file">Exercise 1: Write an informative README.md file</h2>
+
+<p>You can now write the <code class="language-plaintext highlighter-rouge">README.md</code> file for your repository. To make headings and subheadings, put hashtags before a line of text - the more hashtags, the smaller the heading will appear. You can make lists using <code class="language-plaintext highlighter-rouge">-</code> and numbers <code class="language-plaintext highlighter-rouge">1, 2, 3, etc.</code>. <strong>When working on a shared project, discuss what you may want to include with your collaborators - here are some things you might want to consider:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock4">Copy contents</button><pre class="highlight" id="codeblock4"><code>- Your name
+
+- Project title
+
+- Links to website &amp; social media
+
+- Contact details
+
+</code></pre></div></div>
+
+<p>Once you have written your <code class="language-plaintext highlighter-rouge">README.md</code> file, scroll to the bottom of the page. You can now <strong>commit</strong> the file to the repository. To do so, specify a <strong>commit message</strong> which briefly describes the changes. <strong>Commit messages should concise, but descriptive.</strong> Select <strong>Commit directly to the <code class="language-plaintext highlighter-rouge">main</code> branch</strong> and then click on <strong>Commit changes</strong>.</p>
+
+<p><img src="./Intro to Github for version control_files/github_commit.png" alt="Github website commit edit"></p>
+
+<h2 id="exercise-2-edit-the-gitignore-file">Exercise 2: Edit the <code class="language-plaintext highlighter-rouge">.gitignore</code> file</h2>
+
+<p>Repositories often have a file called <code class="language-plaintext highlighter-rouge">.gitignore</code> and we are about to make one shortly. In this file you specify which files you want Git to ignore when users make changes and add files. Examples include temporary Word, Excel and Powerpoint files, <code class="language-plaintext highlighter-rouge">.Rproj</code> files, <code class="language-plaintext highlighter-rouge">.Rhist</code> files, etc. Some files you might want to only have on your local repository (i.e. on your computer), but not online as they might be too big to store online.</p>
+
+<p>Select the <code class="language-plaintext highlighter-rouge">.gitignore</code> and click ‘Edit’. As you will see, the template GitHub provides for R already includes many file types usually found in R projects that should not be included in shared repositories. You can add more files by specifying each file type on a separate line. <strong>Scroll to the bottom of the document and paste the following additions, without overwriting the rest</strong>. Comments in the file are designated by a <code class="language-plaintext highlighter-rouge">#</code> sign. Then, commit the file to the <code class="language-plaintext highlighter-rouge">main</code> branch.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock5">Copy contents</button><pre class="highlight" id="codeblock5"><code># Prevent users to commit their own .RProj
+*.Rproj
+
+# Temporary files
+*~
+~$*.doc*
+~$*.xls*
+*.xlk
+~$*.ppt*
+
+# Prevent mac users to commit .DS_Store files
+*.DS_Store
+
+# Prevent users to commit the README files created by RStudio
+*README.html
+*README_cache/
+#*README_files/
+</code></pre></div></div>
+
+<h2 id="exercise-3-create-folders">Exercise 3: Create folders</h2>
+
+<p>Think of different folders you may want to include in your repository. If working on a shared repo, discuss with your collaborators. For the repository for a lab group, some examples include: manuscripts, data, figures, scripts, scripts/users/personal_folder_your_name. To make a new folder, click on <code class="language-plaintext highlighter-rouge">Create new file</code> and add in the name of your new folder, e.g. <code class="language-plaintext highlighter-rouge">manuscripts/</code> before the file name, in this case a quick <code class="language-plaintext highlighter-rouge">README.md</code> file. When creating folders within your repo through GitHub’s website, you always need to make at least one file associated with them, you can’t just create an empty folder. You can then write and commit the file.</p>
+
+<p><img src="./Intro to Github for version control_files/newfolder.png" alt="Github new folder screenshot"></p>
+
+<h2 id="github-etiquette">GitHub etiquette</h2>
+
+<p>If you’ll be sharing the repository with collaborators and even for your own benefit, it’s a good idea to define some rules on how to use the repository before we start working within it - for example what GitHub and coding etiquette should people be following? Is there a prefered folder structure, file naming system?</p>
+
+<p>We can make a new <code class="language-plaintext highlighter-rouge">github-etiquette.md</code> file that outlines the rules that people with access to your repository should follow.</p>
+
+<h2 id="exercise-4-write-a-github-etiquettemd-file">Exercise 4: Write a <code class="language-plaintext highlighter-rouge">github-etiquette.md</code> file</h2>
+
+<p>Go to your lab’s main repository, click on <code class="language-plaintext highlighter-rouge">Create new file</code> and add <code class="language-plaintext highlighter-rouge">github-etiquette.md</code> as a file name. Remember to include the file extension <code class="language-plaintext highlighter-rouge">.md</code> - otherwise GitHub won’t know what’s the file format.</p>
+
+<div class="callout important">
+
+  <h2 id="a-few-github-rules">A few GitHub rules:</h2>
+
+  <ul>
+    <li>Keep file paths short and sensible.</li>
+    <li>Don’t use funky characters and spaces in your file names, these cause trouble because of differences in Mac/Windows systems.</li>
+    <li>Always <strong>pull</strong> before you start working on your project and <strong>before you push</strong> in case someone has done any work since the last time you pulled - you wouldn’t want anyone’s work to get lost or to have to resolve many coding conflicts.</li>
+  </ul>
+
+</div>
+
+<h1 id="github3">3. Sync and interact with your repository through <code class="language-plaintext highlighter-rouge">RStudio</code></h1>
+
+<p>The “commit-pull-push” workflow can be embedded within <code class="language-plaintext highlighter-rouge">RStudio</code> using “Projects” and enabling version control for them - we will be doing that shortly in the tutorial.</p>
+
+<p><strong>Log into your Github account and navigate to the repository you created earlier</strong></p>
+
+<p>Click <code class="language-plaintext highlighter-rouge">Code</code> and copy the HTTPS link.</p>
+
+<p><img src="./Intro to Github for version control_files/repo_clone.png" alt="Github clone repository screenshot"></p>
+
+<p>Now open RStudio, click <code class="language-plaintext highlighter-rouge">File/ New Project/ Version control/ Git</code> and paste the HTTPS link from the Github repository into the <code class="language-plaintext highlighter-rouge">Repository URL:</code> field. Select a folder on your computer - that is where the “local” copy of your repository will be (the online one being on Github).</p>
+
+<p>Once you attempt the project, you will be asked to authenticate. <strong>You only need to do this once on your computer.</strong> There are multiple possible ways to authenticate your GitHub account on your computer and make it work with RStudio. Here are two recommended approaches:</p>
+
+<details class="reveal-container">
+  <summary class="reveal">Sign in via Personal Access Token (All platforms, recommended)</summary>
+
+  <h3 id="create-a-personal-access-token-all-platforms">Create a Personal Access Token (All platforms)</h3>
+
+  <p>Creating a Personal Access Token (PAT) is the recommended most secure method for all platforms. However, if you are using Windows (as of September 2021) you may be able to authenticate using the quick “Sign in via browser” option. If you wish to do so, follow the instructions under the next button (Sign in via internet browser (Windows only)).</p>
+
+  <p>You can create a PAT using the GitHub website and specify the exact permissions that it provides your computer when interacting with GitHub in the cloud. We will create a token that allows for access and modifications to the repository.</p>
+
+  <p><strong><em>Step 1:</em></strong> Create PAT at GitHub website</p>
+
+  <ol>
+    <li>In the <strong>GitHub website</strong>, click on your profile picture in the top-right corner and go to <strong>Settings</strong>.</li>
+    <li>In the left sidebar, go to <strong>Developer settings</strong>. Then, again in the left sidebar, click <strong>Personal access tokens</strong>.</li>
+    <li>Click <strong>Generate new token</strong>. Give the token a name (something that describes what you will use it for, e.g. “Local machine token”).</li>
+    <li>Select an <strong>Expiration time</strong>. You can set to no expiration so that you will not have to re-authenticate.</li>
+    <li>Then, select the <strong>permissions</strong> you grant to this token. Simply select the <strong>“repo”</strong> group in bold.</li>
+    <li>Click <strong>Generate token</strong>. Make sure to <strong>copy the token</strong> and store it securely, since the website will not show it to you again. (If something goes wrong, you can always generate a new one.)</li>
+  </ol>
+
+  <p>You can also follow this guide with screenshots:
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token</p>
+
+  <p><strong><em>Step 2:</em></strong> Authenticate (within RStudio)</p>
+
+  <p>On <strong>Windows</strong>, once you interact with a private repository you should get a prompt looking like this:</p>
+
+  <p><img src="./Intro to Github for version control_files/connect_to_github_pat.png" alt="connect to github pat screenshot"></p>
+
+  <p>Simply paste the token into the Personal access token field and continue.</p>
+
+  <p>On <strong>Linux/macOS</strong>, you should get a prompt for your username and then for your password. Input your GitHub username, and <strong>under password, input your PAT instead</strong>.</p>
+
+  <p>Your authentication should now be successful and you can interact with GitHub repositories directly from RStudio.</p>
+
+</details>
+
+<details class="reveal-container">
+  <summary class="reveal">Sign in via internet browser (Windows, fast)</summary>
+
+  <h3 id="sign-in-via-internet-browser">Sign in via internet browser</h3>
+
+  <p>On Windows, once you try to clone a private repository from GitHub, you should get a prompt like this:</p>
+
+  <p><img src="./Intro to Github for version control_files/connect_to_github_sign_in_browser.png" alt="connect to github browser screenshot"></p>
+
+  <p>Simply click “Sign in via browser” and authorise your device in the browser window that pops up. Authentication may happen automatically if already logged into GitHub in your browser.</p>
+
+  <p>If you do not get a window like this, but simply a request to input your username, follow the instructions for Personal Access Token above.</p>
+
+</details>
+
+<details class="reveal-container">
+  <summary class="reveal">Troubleshooting (GitHub in RStudio)</summary>
+
+  <p>Do you have troubles with authenticating with GitHub? Follow this guide to remove GitHub authentication from your computer and sign in anew.</p>
+
+  <p>Important: This is relevant if you used GitHub in an RStudio project before August 13, 2021 and it has since stopped working. This has likely occurred due to changes implemented by GitHub on that date to make authentication more secure. Here is how to fix this issue, by removing GitHub authentication credentials from your computer and logging in again. These instructions may be helpful for other GitHub authentication issues as well.</p>
+
+  <p><strong><em>Step 1 (all platforms):</em></strong></p>
+
+  <p>In your R session in RStudio, execute the following lines:</p>
+
+  <div class="language-r highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock6">Copy contents</button><pre class="highlight" id="codeblock6"><code><span class="n">install.packages</span><span class="p">(</span><span class="s1">'gitcreds'</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">gitcreds</span><span class="p">)</span><span class="w">
+</span><span class="n">gitcreds_delete</span><span class="p">()</span><span class="w">
+</span></code></pre></div>  </div>
+  <p>Do not worry if you receive a warning or error and proceed to the next step.
+Close RStudio (important!).</p>
+
+  <p><strong><em>Step 2:</em></strong></p>
+
+  <p><strong>Windows</strong></p>
+
+  <p>In the <strong>Start Menu</strong>, search for and open <strong>Credential Manager</strong>. Click on <strong>Windows Credentials</strong>. For all listed items that include ‘github’, click on the arrow and then click <strong>Remove</strong>. Close the window.</p>
+
+  <p><strong>Linux</strong></p>
+
+  <p>In the terminal, execute:</p>
+  <div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock7">Copy contents</button><pre class="highlight" id="codeblock7"><code>git config <span class="nt">--global</span> <span class="nt">--unset</span> credential.helper
+<span class="nb">rm</span> <span class="nv">$HOME</span>/.git-credentials
+</code></pre></div>  </div>
+
+  <p><strong>macOS</strong></p>
+
+  <p>In the terminal, paste the following and press Return:</p>
+  <div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock8">Copy contents</button><pre class="highlight" id="codeblock8"><code>git credential-osxkeychain erase
+<span class="nv">host</span><span class="o">=</span>github.com
+<span class="nv">protocol</span><span class="o">=</span>https
+</code></pre></div>  </div>
+
+  <p>Do not worry if you do not find the credentials (under Windows) or the commands produce an error. Proceed to Step 3.</p>
+
+  <p><strong><em>Step 3:</em></strong>
+Open your project within RStudio again and attempt to interact with the GitHub repository (e.g. Pull any changes). You should see a prompt to authenticate. Follow the instructions under the buttons above (Personal Access Token or Login via Browser).</p>
+
+  <p><br>
+<br>
+<br></p>
+
+</details>
+
+<p><br></p>
+
+<p><strong>Before your first commit from your computer, you will need to configure your username and email. This is easily done, and you only need to do it once, afterwards you can commit-pull-push at your convenience!</strong></p>
+
+<p>In the top right corner of the RStudio screen (in the Git tab), click on <code class="language-plaintext highlighter-rouge">More/Shell</code>.</p>
+
+<p><strong>NOTE: If using a Windows PC, the Shell option should launch Git Bash. If it doesn’t open Git Bash, please find Git Bash on your computer instead. You can usually search for it in the Start menu, or right-click on the empty space in any folder in the File Explorer and click “Git Bash Here”.</strong></p>
+
+<p><img src="./Intro to Github for version control_files/shell.png" alt="RStudio terminal screenshot"></p>
+
+<h3 id="copy-the-following-code">Copy the following code:</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock9">Copy contents</button><pre class="highlight" id="codeblock9"><code>git config --global user.email your_email@example.com
+# Add the email with which you registered on GitHub and click Enter
+
+git config --global user.name "Your GitHub Username"
+# Add your GitHub username and click Enter
+</code></pre></div></div>
+
+<p>If it worked fine, there will be no messages, you can close the shell window and do your commit again, this time it will work!</p>
+
+<div class="callout important">
+
+  <h2 id="hiccups">Hiccups?</h2>
+
+  <p>We know that there might be problems with the newest updates of the Mac software and installing git and linking it with RStudio. The solutions appear to be very specific to the Mac version you have, so if the above steps didn’t work, a good starting point is googling "rstudio can’t find git mac <strong>your version</strong>" and trying out the suggested solutions.</p>
+
+</div>
+
+<p>Once the files have finished copying across (this may take a while depending on the size of the repo you’re joining), you will notice that a few things about your RStudio session have changed: there is a <code class="language-plaintext highlighter-rouge">Git</code> tab in the top right corner of RStudio, and all the files that are in the repo are now on your computer as well.</p>
+
+<p>You are now ready to start making changes and documenting them through Github!  <strong>Note that you can’t push empty folders.</strong></p>
+
+<p>You can open some of the files you made online earlier - for example if you click on your <code class="language-plaintext highlighter-rouge">README.md</code> file, it will open in <code class="language-plaintext highlighter-rouge">RStudio</code> and you can make changes. Add some more text just for the sake of exemplifying how version control works. Save the file in the same location (i.e., your repository).</p>
+
+<p><img src="./Intro to Github for version control_files/readme_edit.png" alt="RStudio Git staging area screenshot"></p>
+
+<p>If you click on the <code class="language-plaintext highlighter-rouge">Git</code> tab you will see that now your <code class="language-plaintext highlighter-rouge">README.md</code> file is listed there. Add a tick next to it. Now it has an <code class="language-plaintext highlighter-rouge">M</code> - this means you have modified the file. If there’s an <code class="language-plaintext highlighter-rouge">A</code>, that’s an added file, and a <code class="language-plaintext highlighter-rouge">D</code> is a deleted file.</p>
+
+<p>If you select the <code class="language-plaintext highlighter-rouge">README.md</code> file and click on <code class="language-plaintext highlighter-rouge">Diff</code>, you will see the changes you have made. Once the file is selected, it is <code class="language-plaintext highlighter-rouge">staged</code>, ready to be commited to Github.</p>
+
+<p>Click on <code class="language-plaintext highlighter-rouge">Commit</code> and add in your <code class="language-plaintext highlighter-rouge">commit message</code> - aim to be concise and informative - what did you do? Once you have clicked on <code class="language-plaintext highlighter-rouge">Commit</code>, you will get a message about what changes you have made.</p>
+
+<p><img src="./Intro to Github for version control_files/commit_window.png" alt="RStudio Git commit interface screenshot"></p>
+
+<p>You will see a message saying that your branch is now one commit ahead of the <code class="language-plaintext highlighter-rouge">origin/main</code> branch - that is the branch that is on Github - we now need to let Github know about the changes we have made.</p>
+
+<p><img src="./Intro to Github for version control_files/git4.png" alt="RStudio Git branch status screenshot"></p>
+
+<p>We can’t repeat it enough: <strong>always <code class="language-plaintext highlighter-rouge">Pull</code> before you <code class="language-plaintext highlighter-rouge">Push</code>.</strong> <code class="language-plaintext highlighter-rouge">Pull</code> means that you are retrieving the most recent version of the Github repository onto your local branch - this command is especially useful if several people are working within the same repository - imagine there was a second script examining soil pH along this elevation gradient, and your collaborator was working on it the same time as you - you wouldn’t want to “overwrite” their work and cause trouble. In this case, you are the only one working on these files, but it’s still good to develop the practice of pulling before you push. Once you’ve pulled, you’ll see a message that you are already up to date, you can now push! Click on <code class="language-plaintext highlighter-rouge">Push</code>, wait for the loading to be over and then click on <code class="language-plaintext highlighter-rouge">Close</code> - that was it, you have successfully pushed your work to Github!</p>
+
+<p>Go back to your repository on Github, where you can now see all of your updated files online.</p>
+
+<p><img src="./Intro to Github for version control_files/updated_repo.png" alt="Github repository updated screenshot"></p>
+
+<p>Click on your script file and then on <code class="language-plaintext highlighter-rouge">History</code> - this is where you can see the different versions of your script - obviously in real life situations you will make many changes as your work progresses - here we just have two. Thanks to Github and version control, you don’t need to save hundreds of almost identical files (e.g. <code class="language-plaintext highlighter-rouge">Dissertation_script_25thFeb.R</code>, <code class="language-plaintext highlighter-rouge">Dissertation_script_26thFeb.R</code>) - you have one file and by clicking on the different commits, you can see what it looked like at different points in time.</p>
+
+<p><img src="./Intro to Github for version control_files/repo_history.png" alt="Github commit history screenshot"></p>
+
+<p><strong>You are now ready to add your scripts, plots, data files, etc. to your new project directory and follow the same workflow as outlined above - stage your files, commit, pull, push.</strong></p>
+
+<h2 id="potential-problems">Potential problems</h2>
+
+<p>Sometimes you will see error messages as you try to commit-pull-push. Usually the error message identifies the problem and which file it’s associated with, if the message is more obscure, googling it is a good step towards solving the problem. Here are some potential problems that might arise:</p>
+
+<h3 id="code-conflicts">Code conflicts</h3>
+
+<p>While you were working on a certain part of a script, someone else was working on it, too. When you go through commit-pull-push, GitHub will make you decide which version you want to keep. This is called a code conflict, and you can’t proceed until you’ve resolved it. You will see arrows looking like <code class="language-plaintext highlighter-rouge">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> around the two versions of the code - delete the version of the code you don’t want to keep, as well as the arrows, and your conflict should disappear.</p>
+
+<h3 id="pushing-the-wrong-files">Pushing the wrong files</h3>
+
+<p>If you accidentally push what you didn’t intend to, deleted many things (or everything!) and then pushed empty folders, you can revert your commit. You can keep reverting until you reach the point in time when everything was okay. This is an easy way out if you’re the only person working in the repository - <strong>be aware that if there are other people that have committed to the repository, reverting will also undo all of their work, as reverting refers to the repository as a whole, not just your own work in it.</strong></p>
+
+<p>Using these “undo” commands can be daunting, so make sure you read up on the different commands before you attempt anything that may delete work permanently: <a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-revert">here’s a starter</a>. It’s a good idea to regularly back up your repository to an external hard drive <em>juuuust</em> in case!</p>
+
+<h3 id="verified-commits">Verified commits</h3>
+
+<p>When you browse your commit history through the GitHub website, you may notice that commits made through the website are listed as “Verified”, while commits pushed from your computer are not. This is generally not a big deal, but in large collaborative projects you may want to verify your locally made commits - <a href="https://docs.github.com/en/github/authenticating-to-github/about-commit-signature-verification">here is a guide how</a>.</p>
+
+<h1 id="github4">4. Sync and interact with your repository through the command line</h1>
+
+<p>Traditionally, Git uses the command line to perform actions on local Git repositories. In this tutorial we ignored the command line but it is necessary if you want more control over Git. There are several excellent introductory guides on version control using Git, e.g. <a href="http://simon-m-mudd.github.io/NMDM_book/#_version_control_with_git">Prof Simon Mudd’s Numeracy, Modelling and Data management guide</a>, <a href="https://swcarpentry.github.io/git-novice/">The Software Carpentry guide</a>, and this <a href="https://github.com/BES2016Workshop/version-control">guide from the British Ecological Society Version Control workshop</a>. For more generic command line tools, look at this <a href="https://www.git-tower.com/blog/command-line-cheat-sheet">general cheat sheet</a> and this <a href="https://github.com/0nn0/terminal-mac-cheatsheet">cheat sheet for mac users</a>. We have also created a table and flow diagram with some basic Git commands and how they fit into the Git/Github workflow. Orange lines refer to the core workflow, the blue lines describe extra functions and the green lines deal with branches:</p>
+
+<p><img src="./Intro to Github for version control_files/git_cli_nmdm.png" alt="Git command flow diagram"></p>
+
+<table>
+  <tbody><tr>
+    <th>Command</th>
+    <th>Origin</th>
+    <th>Destination</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>git clone REPO_URL</code></td>
+    <td>Personal Github</td>
+    <td>Local</td>
+    <td>Creates a local copy of a Github repo. The URL can be copied from Github.com by clicking the `Clone or Download` button.</td>
+  </tr>
+  <tr>
+    <td><code>git add README.md</code></td>
+    <td>Working Dir</td>
+    <td>Staging Area</td>
+    <td>Add "README.md" to staging area.</td>
+  </tr>
+  <tr>
+    <td><code>git commit</code></td>
+    <td>Staging Area</td>
+    <td>Local</td>
+    <td>Commits changes to files to the local repo.</td>
+  </tr>
+  <tr>
+    <td><code>git commit -a</code></td>
+    <td>Working Dir</td>
+    <td>Local</td>
+    <td>adds and commits all file changes to the local repo.</td>
+  </tr>
+  <tr>
+    <td><code>git pull</code></td>
+    <td>Personal Github</td>
+    <td>Local</td>
+    <td>Retrieve any changes from a Github repo.</td>
+  </tr>
+  <tr>
+    <td><code>git push</code></td>
+    <td>Local</td>
+    <td>Personal Github</td>
+    <td>Sends commited file changes to Github repo.</td>
+  </tr>
+  <tr>
+    <td><code>git merge</code></td>
+    <td>Other branch</td>
+    <td>Current branch</td>
+    <td>Merge any changes in the named branch with the current branch.</td>
+  </tr>
+  <tr>
+    <td><code>git checkout -b patch1</code></td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>Create a branch called "patch1" from the current branch and switch to it.</td>
+  </tr>
+  <tr>
+    <td><code>git init</code></td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>Initialise a directory as a Git repo.</td>
+  </tr>
+  <tr>
+    <td><code>git log</code></td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>Display the commit history for the current repo</td>
+  </tr>
+  <tr>
+    <td><code>git status</code></td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>See which files are staged/unstaged/changed</td>
+  </tr>
+  <tr>
+    <td><code>git diff</code></td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>See the difference between staged uncomitted changes and the most recent commit</td>
+  </tr>
+  <tr>
+    <td><code>git stash</code></td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>Save uncommitted changes in a temporary version and revert to the most recent commit</td>
+  </tr>
+</tbody></table>
+
+<p>Below is a quick exercise so you can familiarise yourself with these command line tools. There are a few ways to use interact with Git using the terminal:</p>
+
+<ol>
+  <li>If you are already in RStudio on a Mac or Linux machine, you can open a terminal within RStudio by going to <code class="language-plaintext highlighter-rouge">Tools -&gt; Terminal -&gt; New Terminal</code> in the menu.</li>
+  <li>If you are on a Mac or Linux machine you could just open a terminal program and run Git from there. Most Mac and Linux machines will have Git installed by default. On Mac you can go open a terminal by going to: <code class="language-plaintext highlighter-rouge">Applications/Utilities/Terminal.app</code>.</li>
+  <li>If you are on a personal Windows machine, you can run Git using Git Bash, which can be installed when you installed Git. You should be able to launch it from More -&gt; Shell in RStudio. If that doesn’t work, look up the programme under your Start Menu.</li>
+</ol>
+
+<p><img src="./Intro to Github for version control_files/rstudio_new_terminal.png" alt="RStudio new terminal menu item screenshot"></p>
+
+<p>Once you have opened a terminal using one of the above methods, start by creating a folder somewhere on your local system called <code class="language-plaintext highlighter-rouge">git_test</code>, using the <code class="language-plaintext highlighter-rouge">mkdir</code> (make directory) command by typing the following into the terminal and hitting “Enter”. For example, to create the directory in the Documents folder:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock10">Copy contents</button><pre class="highlight" id="codeblock10"><code><span class="nb">mkdir</span> ~/Documents/git_test
+</code></pre></div></div>
+
+<p>Then enter that folder using <code class="language-plaintext highlighter-rouge">cd</code> (change directory):</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock11">Copy contents</button><pre class="highlight" id="codeblock11"><code><span class="nb">cd</span> ~/Documents/git_test
+</code></pre></div></div>
+
+<p>To make the folder into a Git repository:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock12">Copy contents</button><pre class="highlight" id="codeblock12"><code>git init
+</code></pre></div></div>
+
+<p>Now the folder has been made into a Git repository, allowing you to track changes to files. Now, lets create a <code class="language-plaintext highlighter-rouge">README.md</code> file inside the repository and put some text in it, using whatever text editor you are comfortable with. Make sure to place this <code class="language-plaintext highlighter-rouge">README.md</code> file into the repository folder on your device so it can be found!</p>
+
+<p>You can create empty text files via a single command in the shell:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock13">Copy contents</button><pre class="highlight" id="codeblock13"><code><span class="nb">touch </span>README.md
+<span class="nb">touch</span> .gitignore
+<span class="nb">touch </span>test.R
+</code></pre></div></div>
+
+<p>Now, to add a file to be tracked by the Git repository:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock14">Copy contents</button><pre class="highlight" id="codeblock14"><code>git add README.md
+</code></pre></div></div>
+
+<p>To check what files have been staged and unstaged changes:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock15">Copy contents</button><pre class="highlight" id="codeblock15"><code>git status
+</code></pre></div></div>
+
+<p>The README.md file has now been added to the staging area, but has not yet been committed to a version of the repository. To commit a version:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock16">Copy contents</button><pre class="highlight" id="codeblock16"><code>git commit <span class="nt">-m</span> <span class="s2">"Your commit message here"</span>
+</code></pre></div></div>
+
+<p>Currently, the Git repository is still only on our local computer. Versions are being committed, but they are not being backed up to a remote version of the repository on Github. Go to Github and create a repository called <code class="language-plaintext highlighter-rouge">git_test</code>, like you did earlier on in the workshop, but this time don’t create a <code class="language-plaintext highlighter-rouge">README.md</code> because we have just made one on the local computer. Now, copy the HTTPS link for that repository. In the terminal, link the local Git repository with the remote repository using the following code, replacing <code class="language-plaintext highlighter-rouge">&lt;HTTPS_LINK&gt;</code> with the link you copied:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock17">Copy contents</button><pre class="highlight" id="codeblock17"><code>git remote add origin &lt;HTTPS_LINK&gt;
+</code></pre></div></div>
+
+<p>Then make the first push to that newly linked remote repository:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><button class="copy-button" data-clipboard-target="#codeblock18">Copy contents</button><pre class="highlight" id="codeblock18"><code>git push <span class="nt">-u</span> origin main
+</code></pre></div></div>
+
+<p>Now you can continue editing files, adding changes (<code class="language-plaintext highlighter-rouge">git add &lt;FILE&gt;</code>), committing changes (<code class="language-plaintext highlighter-rouge">git commit</code>), pulling (<code class="language-plaintext highlighter-rouge">git pull</code>) and pushing (<code class="language-plaintext highlighter-rouge">git push</code>) changes, similar to the process you did with clicking buttons in RStudio. Feel free to explore some of the more advanced commands laid out in the table and flow diagram above. You can also check out a more advanced command line tutorial written by <a href="http://simon-m-mudd.github.io/NMDM_book/#_version_control_with_git">Prof Simon Mudd for Numeracy, Modelling and Data management guide</a>.</p>
+
+<p>This tutorial was developed as part of the collaboration between Coding Club and the NERC E3 Doctoral Training Programme. To learn more about the E3 DTP, check out  <a href="http://e3dtp.geos.ed.ac.uk/">the programme’s website</a>.</p>
+
+<p><img src="./Intro to Github for version control_files/dtp_for_cc.jpg" alt="NERC E3 DTP logo"></p>
+
+	<div class="survey">
+		<h5>Stay up to date and learn about our newest resources by following us on <a href="https://twitter.com/our_codingclub" target="_blank">Twitter</a>!</h5>	
+	
+		<h5><a href="https://ourcodingclub.github.io/tutorials/git/" target="_blank">We would love to hear your feedback, please fill out our survey!</a></h5>
+	
+	<h5>Contact us with any questions on <a href="mailto:ourcodingclub@gmail.com?Subject=Tutorial%20question" target="_top">ourcodingclub@gmail.com</a></h5>	
+    
+    
+	
+	<h3>Related tutorials:</h3>
+	
+	
+		
+    		<ul>
+  				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+						<li><a href="https://ourcodingclub.github.io/tutorials/rmarkdown/">Getting Started with R Markdown</a></li>
+  					
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+						<li><a href="https://ourcodingclub.github.io/tutorials/etiquette/">Coding etiquette</a></li>
+  					
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+						<li><a href="https://ourcodingclub.github.io/tutorials/git-for-labs/">Setting up a GitHub repository for your lab</a></li>
+  					
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+						<li><a href="https://ourcodingclub.github.io/tutorials/tutorials/">Transferring quantitative skills among scientists</a></li>
+  					
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+    				
+				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+						<li><a href="https://ourcodingclub.github.io/tutorials/writing-r-package/">Writing R packages in Rstudio</a></li>
+  					
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+    				
+				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+    				
+				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+    				
+				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+						<li><a href="https://ourcodingclub.github.io/tutorials/rmarkdown-dissertation/">Write your dissertation in Rmarkdown</a></li>
+  					
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+    				
+				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+		
+    		<ul>
+  				
+    				
+				
+			</ul>
+		
+	
+</div>
+
+</div><iframe title="__uspapiLocator" name="__uspapiLocator" style="display: none;" src="./Intro to Github for version control_files/saved_resource.html"></iframe><iframe title="__tcfapiLocator" name="__tcfapiLocator" style="display: none;" src="./Intro to Github for version control_files/saved_resource(1).html"></iframe>
+
+    	<footer class="footer">
+	<hr>
+	<div class="footer-container">
+    	<ul class="footer-link-list">
+        	<li><a href="https://ourcodingclub.github.io/tutorials">Tutorials</a></li>
+        	<li><a href="https://ourcodingclub.github.io/team">About Us</a></li>
+        	<li><a href="https://ourcodingclub.github.io/contact">Contact us</a></li>
+	    	<li><a href="https://twitter.com/our_codingclub">Follow us on Twitter</a></li>
+    	</ul>
+    	<div class="footer-text">
+			<p>We are happy for people to use and further develop our tutorials - please give credit to Coding Club by linking to <a href="https://ourcodingclub.github.io/">our website</a>. We are also happy to discuss possible collaborations, so get in touch at <b>ourcodingclub(at)gmail.com</b></p>
+    		<p>See our <a href="https://ourcodingclub.github.io/terms">Terms of Use</a> and our <a href="https://ourcodingclub.github.io/privacy">Data Privacy policy</a>.</p>
+		<p>Disclaimer: All Coding Club tutorials are created for teaching purposes. We do our best to maintain the content and to provide updates, but sometimes package updates break the code and not all code works on all operating systems. Please note that how you use our tutorials is ultimately up to you. We do not carry responsibility for whether the tutorial code will work at the time you use the tutorial. We do not carry responsibility for whether the approaches used in the tutorials are appropriate for your own analyses. We encourage users to engage and updating tutorials by using <a href="https://github.com/ourcodingclub/ourcodingclub.github.io" target="_blank">pull requests in GitHub</a>.</p>	
+		<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a></p>
+			<a href="https://creativecommons.org/licenses/by-sa/4.0/"><img class="license" src="./Intro to Github for version control_files/80x15.png" alt="CC-by-sa-4.0"></a>
+    	</div>
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="./Intro to Github for version control_files/owl.carousel.js"></script>
+<script src="./Intro to Github for version control_files/owl.carousel-init.js"></script>
+<script src="./Intro to Github for version control_files/clipboard.min.js"></script>
+<script src="./Intro to Github for version control_files/codeselect.js"></script>
+<script src="./Intro to Github for version control_files/hide-back.js"></script>
+
+
+	
+    	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[1];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92956541-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+    
+	
+
+</body></html>

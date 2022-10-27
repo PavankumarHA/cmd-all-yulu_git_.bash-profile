@@ -1,0 +1,48 @@
+
+var ftGUID_4214912="5336A82C86AFC6";
+var ftConfID_4214912="0";
+var ftParams_4214912="ftOBA=1&ft_agentEnv=0&ft_referrer=https%3A%2F%2F3719930663fd94cd5e2550f6e8e7cf3b.safeframe.googlesyndication.com%2Fsafeframe%2F1-0-38%2Fhtml%2Fcontainer.html&gdpr=0&us_privacy=${US_PRIVACY}&cachebuster=206922.62376002013&ft_dv=%5B%25ft_dv%25%5D";
+var ftKeyword_4214912="";
+var ftCustom_4214912="";
+var ftSection_4214912="";
+var ftSegment_4214912="";
+var ftSegmentList_4214912=[];
+var ftRuleMatch_4214912="0";
+var ftTimestamp_4214912="1666770359";
+var ftGeoC2_4214912="in";
+var ftGeoState_4214912="ka";
+var ftGeoCity_4214912="bangalore";
+var ftISP_4214912="atria convergence technologies pvt. ltd.";
+var ftSpeed_4214912="broadband";
+var ftDMA_4214912="356004";
+var ftLong_4214912="77.58";
+var ftLat_4214912="12.96";
+var ftPostal_4214912="560002";
+var ftTimeZone_4214912="530";
+var ftMobileCarrier_4214912="";
+var ftImp4214912 = {};
+ftImp4214912.privacy = "x";
+ftImp4214912.guidAge = "76";
+ftImp4214912.impID = "57A772AC-F9DA-7BA9-098A-FE2D6E2D526A";
+ftImp4214912.duid = "FT:5336A82C86AFC6";
+
+ftImp4214912.ft_tpplid = "";
+ftImp4214912.ft_c = {};
+ftImp4214912.gdpr = "0";
+ftImp4214912.gdpr_consent = "";
+ftImp4214912.gdpr_pd = "";
+ftImp4214912.oob_consent = "";
+ftImp4214912.gdprStoredConsent = "";
+ftImp4214912.us_privacy = "!!US_PRIVACY!";
+
+ftImp4214912.jsAppend = "1";
+(function(){
+    var tag = document.getElementById('ft_servedby_4214912') || (function(s){
+    	return s[s.length-1];
+    }(document.getElementsByTagName('script'))),
+           js = document.createElement('script');
+    js.src =
+"https://cdn.flashtalking.com/xre/421/4214912/3872832/js/j-4214912-3872832.js";
+    js.id = "ftscript_m4214912";
+    tag.parentNode.insertBefore(js, tag);
+}());

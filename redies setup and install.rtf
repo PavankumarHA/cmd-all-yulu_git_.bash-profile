@@ -1,0 +1,411 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;\f2\fnil\fcharset0 AppleColorEmoji;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red251\green2\blue7;\red253\green128\blue8;
+\red128\green0\blue128;\red255\green255\blue10;\red64\green11\blue217;\red47\green180\blue29;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c100000\c14913\c0;\cssrgb\c100000\c57637\c0;
+\cssrgb\c57919\c12801\c57269;\cssrgb\c99942\c98555\c0;\cssrgb\c32309\c18666\c88229;\cssrgb\c20241\c73898\c14950;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 \
+
+\f1\b\fs36 \cf3 			install redies\
+
+\f0\b0\fs22 \cf2 \
+ 
+\fs28 \cf4 1  
+\f1\b  /bin/bash -c "curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/			install.sh)\
+\
+\
+\
+  2  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/				HEAD/install.sh)"
+\f0\b0 \
+ 3  
+\f1\b brew --version\
+ 4  brew install redis\
+ 5  ssh  ubuntu@172.31.12.228\
+  6 ssh ubuntu@172.31.12.228\
+ 7  edis-server\
+ 8  redis-server\
+   history
+\fs22 \
+\
+
+\f0\b0 \
+\cf2 \
+\
+\
+\
+\
+\
+pavans-MacBook-Pro:~ pavankumarha$ \cf5 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"\cf6 \
+
+\f1\b \cf7 ==>\cf2  Checking for `sudo` access (which may request your password)...
+\f0\b0 \
+Password:\
+
+\f1\b \cf7 ==>\cf2  This script will install:
+\f0\b0 \
+/usr/local/bin/brew\
+/usr/local/share/doc/homebrew\
+/usr/local/share/man/man1/brew.1\
+/usr/local/share/zsh/site-functions/_brew\
+/usr/local/etc/bash_completion.d/brew\
+/usr/local/Homebrew\
+
+\f1\b \cf7 ==>\cf2  The following existing directories will be made group writable:
+\f0\b0 \
+/usr/local/bin\
+/usr/local/include\
+/usr/local/lib\
+/usr/local/share\
+/usr/local/share/doc\
+/usr/local/share/man\
+/usr/local/share/man/man1\
+
+\f1\b \cf7 ==>\cf2  The following existing directories will have their owner set to \ul pavankumarha
+\f0\b0 \ulnone :\
+/usr/local/bin\
+/usr/local/include\
+/usr/local/lib\
+/usr/local/share\
+/usr/local/share/doc\
+/usr/local/share/man\
+/usr/local/share/man/man1\
+
+\f1\b \cf7 ==>\cf2  The following existing directories will have their group set to \ul admin
+\f0\b0 \ulnone :\
+/usr/local/bin\
+/usr/local/include\
+/usr/local/lib\
+/usr/local/share\
+/usr/local/share/doc\
+/usr/local/share/man\
+/usr/local/share/man/man1\
+
+\f1\b \cf7 ==>\cf2  The following new directories will be created:
+\f0\b0 \
+/usr/local/etc\
+/usr/local/sbin\
+/usr/local/var\
+/usr/local/opt\
+/usr/local/share/zsh\
+/usr/local/share/zsh/site-functions\
+/usr/local/var/homebrew\
+/usr/local/var/homebrew/linked\
+/usr/local/Cellar\
+/usr/local/Caskroom\
+/usr/local/Frameworks\
+\
+Press 
+\f1\b RETURN
+\f0\b0 /
+\f1\b ENTER
+\f0\b0  to continue or any other key to abort:\
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /bin/chmod u+rwx /usr/local/bin /usr/local/include /usr/local/lib /usr/local/share /usr/local/share/doc /usr/local/share/man /usr/local/share/man/man1
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /bin/chmod g+rwx /usr/local/bin /usr/local/include /usr/local/lib /usr/local/share /usr/local/share/doc /usr/local/share/man /usr/local/share/man/man1
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /usr/sbin/chown pavankumarha /usr/local/bin /usr/local/include /usr/local/lib /usr/local/share /usr/local/share/doc /usr/local/share/man /usr/local/share/man/man1
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /usr/bin/chgrp admin /usr/local/bin /usr/local/include /usr/local/lib /usr/local/share /usr/local/share/doc /usr/local/share/man /usr/local/share/man/man1
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /bin/mkdir -p /usr/local/etc /usr/local/sbin /usr/local/var /usr/local/opt /usr/local/share/zsh /usr/local/share/zsh/site-functions /usr/local/var/homebrew /usr/local/var/homebrew/linked /usr/local/Cellar /usr/local/Caskroom /usr/local/Frameworks
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /bin/chmod ug=rwx /usr/local/etc /usr/local/sbin /usr/local/var /usr/local/opt /usr/local/share/zsh /usr/local/share/zsh/site-functions /usr/local/var/homebrew /usr/local/var/homebrew/linked /usr/local/Cellar /usr/local/Caskroom /usr/local/Frameworks
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /bin/chmod go-w /usr/local/share/zsh /usr/local/share/zsh/site-functions
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /usr/sbin/chown pavankumarha /usr/local/etc /usr/local/sbin /usr/local/var /usr/local/opt /usr/local/share/zsh /usr/local/share/zsh/site-functions /usr/local/var/homebrew /usr/local/var/homebrew/linked /usr/local/Cellar /usr/local/Caskroom /usr/local/Frameworks
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /usr/bin/chgrp admin /usr/local/etc /usr/local/sbin /usr/local/var /usr/local/opt /usr/local/share/zsh /usr/local/share/zsh/site-functions /usr/local/var/homebrew /usr/local/var/homebrew/linked /usr/local/Cellar /usr/local/Caskroom /usr/local/Frameworks
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /bin/mkdir -p /usr/local/Homebrew
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /usr/sbin/chown -R pavankumarha:admin /usr/local/Homebrew
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /bin/mkdir -p /Users/pavankumarha/Library/Caches/Homebrew
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /bin/chmod g+rwx /Users/pavankumarha/Library/Caches/Homebrew
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  /usr/bin/sudo /usr/sbin/chown -R pavankumarha /Users/pavankumarha/Library/Caches/Homebrew
+\f0\b0 \
+
+\f1\b \cf7 ==>\cf2  Downloading and installing Homebrew...
+\f0\b0 \
+remote: Enumerating objects: 214435, done.\
+remote: Counting objects: 100% (114/114), done.\
+remote: Compressing objects: 100% (102/102), done.\
+remote: Total 214435 (delta 41), reused 82 (delta 12), pack-reused 214321\
+Receiving objects: 100% (214435/214435), 59.70 MiB | 5.04 MiB/s, done.\
+Resolving deltas: 100% (157773/157773), done.\
+From https://github.com/Homebrew/brew\
+ * [new branch]          master     -> origin/master\
+ * [new tag]             0.1        -> 0.1\
+ * [new tag]             0.2        -> 0.2\
+ * [new tag]             0.3        -> 0.3\
+  * [new tag]             1.3.7      -> 1.3.7\
+ * [new tag]             1.3.8      -> 1.3.8\
+ * [new tag]             1.3.9      -> 1.3.9\
+ * [new tag]             1.4.0      -> 1.4.0\
+ * [new tag]             1.4.1      -> 1.4.1\
+ * [new tag]             1.4.2      -> 1.4.2\
+ * [new tag]             1.4.3      -> 1.4.3\
+ * [new tag]             1.5.0      -> 1.5.0\
+ * [new tag]             1.5.1      -> 1.5.1\
+ * [new tag]             1.5.10     -> 1.5.10\
+ * [new tag]             1.5.11     -> 1.5.11\
+ * [new tag]             1.5.12     -> 1.5.12\
+ * [new tag]             1.5.13     -> 1.5.13\
+ * [new tag]             1.5.14     -> 1.5.14\
+ * [new tag]             1.5.2      -> 1.5.2\
+ * [new tag]             1.5.3      -> 1.5.3\
+ * [new tag]             1.5.4      -> 1.5.4\
+ * [new tag]             1.5.5      -> 1.5.5\
+ * [new tag]             1.5.6      -> 1.5.6\
+ * [new tag]             1.5.7      -> 1.5.7\
+ * [new tag]             1.5.8      -> 1.5.8\
+ * [new tag]             1.5.9      -> 1.5.9\
+ * [new tag]             1.6.0      -> 1.6.0\
+ * [new tag]             1.6.1      -> 1.6.1\
+ * [new tag]             1.6.10     -> 1.6.10\
+ * [new tag]             1.6.11     -> 1.6.11\
+ * [new tag]             1.6.12     -> 1.6.12\
+ * [new tag]             1.6.13     -> 1.6.13\
+ * [new tag]             1.6.14     -> 1.6.14\
+ * [new tag]             1.6.15     -> 1.6.15\
+ * [new tag]             1.6.16     -> 1.6.16\
+ * [new tag]             1.6.17     -> 1.6.17\
+ * [new tag]             1.6.2      -> 1.6.2\
+ * [new tag]             1.6.3      -> 1.6.3\
+ * [new tag]             1.6.4      -> 1.6.4\
+ * [new tag]             1.6.5      -> 1.6.5\
+ * [new tag]             1.6.6      -> 1.6.6\
+ * [new tag]             1.6.7      -> 1.6.7\
+ * [new tag]             1.6.8      -> 1.6.8\
+ * [new tag]             1.6.9      -> 1.6.9\
+ * [new tag]             1.7.0      -> 1.7.0\
+ * [new tag]             1.7.1      -> 1.7.1\
+ * [new tag]             1.7.2      -> 1.7.2\
+ * [new tag]             1.7.3      -> 1.7.3\
+ * [new tag]             1.7.4      -> 1.7.4\
+ * [new tag]             1.7.5      -> 1.7.5\
+ * [new tag]             1.7.6      -> 1.7.6\
+ * [new tag]             1.7.7      -> 1.7.7\
+ * [new tag]             1.8.0      -> 1.8.0\
+ \
+  * [new tag]             3.2.0      -> 3.2.0\
+ * [new tag]             3.2.1      -> 3.2.1\
+ * [new tag]             3.2.10     -> 3.2.10\
+ * [new tag]             3.2.11     -> 3.2.11\
+ * [new tag]             3.2.12     -> 3.2.12\
+ * [new tag]             3.2.13     -> 3.2.13\
+ * [new tag]             3.2.14     -> 3.2.14\
+ * [new tag]             3.2.15     -> 3.2.15\
+ * [new tag]             3.2.16     -> 3.2.16\
+ * [new tag]             3.2.17     -> 3.2.17\
+ * [new tag]             3.2.2      -> 3.2.2\
+ * [new tag]             3.2.3      -> 3.2.3\
+ * [new tag]             3.2.4      -> 3.2.4\
+  * [new tag]             3.5.3      -> 3.5.3\
+ * [new tag]             3.5.4      -> 3.5.4\
+ * [new tag]             3.5.5      -> 3.5.5\
+ * [new tag]             3.5.6      -> 3.5.6\
+ * [new tag]             3.5.7      -> 3.5.7\
+ * [new tag]             3.5.8      -> 3.5.8\
+ * [new tag]             3.5.9      -> 3.5.9\
+HEAD is now at fcb30c1ea Merge pull request #13702 from Rylan12/sha256-arch\
+
+\f1\b \cf7 ==>\cf2  Tapping homebrew/core
+\f0\b0 \
+remote: Enumerating objects: 1251070, done.\
+remote: Counting objects: 100% (183/183), done.\
+remote: Compressing objects: 100% (120/120), done.\
+remote: Total 1251070 (delta 103), reused 140 (delta 63), pack-reused 1250887\
+Receiving objects: 100% (1251070/1251070), 501.60 MiB | 5.30 MiB/s, done.\
+Resolving deltas: 100% (862038/862038), done.\
+From https://github.com/Homebrew/homebrew-core\
+ * [new branch]              master     -> origin/master\
+Updating files: 100% (6584/6584), done.\
+HEAD is now at 88232c9559f picat: update 3.2#8 bottle.\
+
+\f1\b \cf7 ==>\cf2  Installation successful!
+\f0\b0 \
+\
+
+\f1\b \cf7 ==>\cf2  Homebrew has enabled anonymous aggregate formulae and cask analytics.
+\f0\b0 \
+
+\f1\b Read the analytics documentation (and how to opt-out) here:
+\f0\b0 \
+
+\f1\b   \ul https://docs.brew.sh/Analytics
+\f0\b0 \ulnone \
+No analytics data has been sent yet (nor will any be during this 
+\f1\b install
+\f0\b0  run).\
+\
+
+\f1\b \cf7 ==>\cf2  Homebrew is run entirely by unpaid volunteers. Please consider donating:
+\f0\b0 \
+  \ul https://github.com/Homebrew/brew#donations\ulnone \
+\
+
+\f1\b \cf7 ==>\cf2  Next steps:
+\f0\b0 \
+- Run 
+\f1\b brew help
+\f0\b0  to get started\
+- Further documentation:\
+    \ul https://docs.brew.sh\ulnone \
+\
+pavans-MacBook-Pro:~ pavankumarha$ brew --version\
+Homebrew 3.5.9\
+Homebrew/homebrew-core (git revision 88232c9559f; last commit 2022-08-18)\
+pavans-MacBook-Pro:~ pavankumarha$ brew install redis\
+\cf7 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2022-07-19_1
+\f0\b0 \
+######################################################################## 100.0%\
+\cf7 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:9e0df163364a5ae07f3ee2cf39083cd74bcb38eeb5250b706e1c02f878d8d632
+\f0\b0 \
+\cf7 ==>\cf2  
+\f1\b Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:9e0df163364a5ae07f3ee2cf39083cd74bcb38eeb5250b706e1c02f878d8d632?se=2022-08-18T12%3A15%3A00Z&sig=RRHyflDJ8JC23VCbG9aTCL
+\f0\b0 \
+######################################################################## 100.0%\
+\cf7 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/openssl/1.1/manifests/1.1.1q
+\f0\b0 \
+######################################################################## 100.0%\
+\cf7 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:b4dabe01061f98a870548cc1bb5a18b68bcbc9021dc87781ead6e3e29a9abadc
+\f0\b0 \
+\cf7 ==>\cf2  
+\f1\b Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:b4dabe01061f98a870548cc1bb5a18b68bcbc9021dc87781ead6e3e29a9abadc?se=2022-08-18T12%3A15%3A00Z&sig=pw3nQ3SusYA%2B7gUXbv%2
+\f0\b0 \
+######################################################################## 100.0%\
+\cf7 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/redis/manifests/7.0.4
+\f0\b0 \
+######################################################################## 100.0%\
+\cf7 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/redis/blobs/sha256:58f58d9fe07000a83e54581dd7fbe22747701d84ba78def762ae94b341f41259
+\f0\b0 \
+\cf7 ==>\cf2  
+\f1\b Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sha256:58f58d9fe07000a83e54581dd7fbe22747701d84ba78def762ae94b341f41259?se=2022-08-18T12%3A15%3A00Z&sig=rRLh2JaXGzajFrjRiu9Vm7
+\f0\b0 \
+######################################################################## 100.0%\
+\cf8 ==>\cf2  
+\f1\b Installing dependencies for redis: \cf8 ca-certificates\cf2  and \cf8 openssl@1.1
+\f0\b0 \cf2 \
+\cf8 ==>\cf2  
+\f1\b Installing redis dependency: \cf8 ca-certificates
+\f0\b0 \cf2 \
+\cf7 ==>\cf2  
+\f1\b Pouring ca-certificates--2022-07-19_1.all.bottle.tar.gz
+\f0\b0 \
+\cf7 ==>\cf2  
+\f1\b Regenerating CA certificate bundle from keychain, this may take a while...
+\f0\b0 \
+
+\f2 \uc0\u55356 \u57210 
+\f0   /usr/local/Cellar/ca-certificates/2022-07-19_1: 3 files, 222.7KB\
+\cf8 ==>\cf2  
+\f1\b Installing redis dependency: \cf8 openssl@1.1
+\f0\b0 \cf2 \
+\cf7 ==>\cf2  
+\f1\b Pouring openssl@1.1--1.1.1q.monterey.bottle.tar.gz
+\f0\b0 \
+
+\f2 \uc0\u55356 \u57210 
+\f0   /usr/local/Cellar/openssl@1.1/1.1.1q: 8,097 files, 18.5MB\
+\cf8 ==>\cf2  
+\f1\b Installing \cf8 redis
+\f0\b0 \cf2 \
+\cf7 ==>\cf2  
+\f1\b Pouring redis--7.0.4.monterey.bottle.tar.gz
+\f0\b0 \
+\cf7 ==>\cf2  
+\f1\b Caveats
+\f0\b0 \
+To restart redis after an upgrade:\
+  brew services restart redis\
+Or, if you don't want/need a background service you can just run:\
+  /usr/local/opt/redis/bin/redis-server /usr/local/etc/redis.conf\
+\cf7 ==>\cf2  
+\f1\b Summary
+\f0\b0 \
+
+\f2 \uc0\u55356 \u57210 
+\f0   /usr/local/Cellar/redis/7.0.4: 14 files, 2.6MB\
+\cf7 ==>\cf2  
+\f1\b Running `brew cleanup redis`...
+\f0\b0 \
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.\
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).\
+\cf8 ==>\cf2  
+\f1\b Caveats
+\f0\b0 \
+\cf7 ==>\cf2  
+\f1\b redis
+\f0\b0 \
+To restart redis after an upgrade:\
+  brew services restart redis\
+Or, if you don't want/need a background service you can just run:\
+  /usr/local/opt/redis/bin/redis-server /usr/local/etc/redis.conf\
+pavans-MacBook-Pro:~ pavankumarha$ ssh  ubuntu@172.31.12.228\
+^C\
+pavans-MacBook-Pro:~ pavankumarha$ ssh ubuntu@172.31.12.228\
+^C\
+pavans-MacBook-Pro:~ pavankumarha$ edis-server\
+-bash: edis-server: command not found\
+pavans-MacBook-Pro:~ pavankumarha$ redis-server\
+10239:C 18 Aug 2022 17:42:02.691 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo\
+10239:C 18 Aug 2022 17:42:02.691 # Redis version=7.0.4, bits=64, commit=00000000, modified=0, pid=10239, just started\
+10239:C 18 Aug 2022 17:42:02.691 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf\
+10239:M 18 Aug 2022 17:42:02.692 * Increased maximum number of open files to 10032 (it was originally set to 2560).\
+10239:M 18 Aug 2022 17:42:02.692 * monotonic clock: POSIX clock_gettime\
+                _._                                                  \
+           _.-``__ ''-._                                             \
+      _.-``    `.  `_.  ''-._           Redis 7.0.4 (00000000/0) 64 bit\
+  .-`` .-```.  ```\\/    _.,_ ''-._                                  \
+ (    '      ,       .-`  | `,    )     Running in standalone mode\
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379\
+ |    `-._   `._    /     _.-'    |     PID: 10239\
+  `-._    `-._  `-./  _.-'    _.-'                                   \
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  \
+ |    `-._`-._        _.-'_.-'    |           https://redis.io       \
+  `-._    `-._`-.__.-'_.-'    _.-'                                   \
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  \
+ |    `-._`-._        _.-'_.-'    |                                  \
+  `-._    `-._`-.__.-'_.-'    _.-'                                   \
+      `-._    `-.__.-'    _.-'                                       \
+          `-._        _.-'                                           \
+              `-.__.-'                                               \
+\
+10239:M 18 Aug 2022 17:42:02.693 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.\
+10239:M 18 Aug 2022 17:42:02.693 # Server initialized\
+10239:M 18 Aug 2022 17:42:02.693 * Ready to accept connections\
+^C10239:signal-handler (1660825259) Received SIGINT scheduling shutdown...\
+10239:M 18 Aug 2022 17:50:59.042 # User requested shutdown...\
+10239:M 18 Aug 2022 17:50:59.042 * Saving the final RDB snapshot before exiting.\
+10239:M 18 Aug 2022 17:50:59.048 * DB saved on disk\
+10239:M 18 Aug 2022 17:50:59.048 # Redis is now ready to exit, bye bye...\
+pavans-MacBook-Pro:~ pavankumarha$ \
+}

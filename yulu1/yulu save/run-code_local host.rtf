@@ -1,0 +1,184 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;\f2\fswiss\fcharset0 Helvetica;
+\f3\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red251\green2\blue255;\red0\green0\blue0;\red252\green73\blue64;
+\red0\green0\blue0;\red18\green79\blue146;\red246\green246\blue246;\red25\green25\blue25;\red255\green255\blue255;
+\red253\green128\blue8;\red164\green8\blue3;\red18\green79\blue146;\red246\green246\blue246;\red22\green21\blue22;
+\red153\green102\blue51;\red103\green29\blue2;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c25279\c100000;\csgray\c0;\cssrgb\c100000\c38374\c31601;
+\cssrgb\c0\c0\c0;\cssrgb\c7059\c39216\c63922;\cssrgb\c97255\c97255\c97255;\cssrgb\c12941\c12941\c12941;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c100000\c57637\c0;\cssrgb\c71055\c10387\c0;\cssrgb\c7059\c39216\c63922;\cssrgb\c97255\c97255\c97255;\cssrgb\c11373\c10980\c11373;
+\cssrgb\c66800\c47512\c25860;\cssrgb\c48452\c16305\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh15080\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b\fs22 \cf2 \CocoaLigature0 // how to run local host code and commit msg \
+
+\f1\b0 \cf3 \
+\
+\
+		git commit -m "user location logs"\
+  475  git push origin release/dev\
+\
+  476  git commit -m "added fix"\
+  477  git push origin release/dev\
+  478  git commit -m "issue fix"\
+  479  git push origi release/dev\
+  484  node app.js\
+\
+\
+  497  git push origin release/dev\
+  498  git checkout  YUL-746-log-location\
+  499  git checkout release/dev\
+\
+  501  ls\
+  502  cd Desktop/\
+  \
+  505  cd yulu-customer-app/\
+  507  git status\
+  508  clear\
+  509  git remote -v\
+  511  clear\
+\
+\
+  512  ssh -i ~/.ssh/id_rsa -N -L 3301:y-db-mig-v2.yulu.app:3306 ubuntu@172.31.12.228 // this one run in terminal ofter that you can find the error in local host\
+\
+\
+\
+\
+\
+
+\f0\b \cf2 // run this port number in postman\
+
+\f1\b0 \cf3 \
+
+\f0\b //.  before run this url in postman u have to run another command in terminal 
+\f1\b0 \cf4 ssh -i ~/.ssh/id_rsa -N -L 3301:y-db-mig-v2.yulu.app:3306 ubuntu@172.31.12.228\cf5  u can run this cmd any where in terminal its working
+\f0\b \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf3 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://localhost:1337/"}}{\fldrslt 
+\f2\fs30 \cf6 \cb7 \expnd0\expndtw0\kerning0
+\CocoaLigature1 http://localhost:1337/}}
+\f2\fs30 \cf6 \cb7 \expnd0\expndtw0\kerning0
+\CocoaLigature1  and here we given 
+\fs24 \cf8 \cb9 track-ride-real-time\
+\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://localhost:1337/"}}{\fldrslt 
+\fs30 \cf6 \cb7 http://localhost:1337/}}track-ride-real-time
+\f1\fs22 \cf3 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 // open yulu dev app then check the api which api call\
+
+\f1\b0 \cf3 \
+\
+Copy the body content paste to the postman body like json \
+\
+And jwt token copy to the mysql database and paste it postman\
+\
+
+\f0\b Query for jwt token get\
+
+\f1\b0  select * from user_location_logs order by id desc;\
+-- 5167174 this is my user_id\
+select * from users where phone = 8088784793;\
+\
+\
+
+\f0\b \cf10 // these our api call in yulu dev app\
+\
+
+\f1\b0 \cf3 //. 
+\f0\b Don\'92t use this url in postman.
+\f1\b0   
+\f3\fs26 \cf11 \cb9 \expnd0\expndtw0\kerning0
+\CocoaLigature1 https://dev-customer.yulu.bike/s/track-ride-real-time 
+\f1\fs22 \cf3 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 ,,, like this one use {\field{\*\fldinst{HYPERLINK "http://localhost:1337/"}}{\fldrslt 
+\f2\fs30 \cf12 \cb13 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec12 http://localhost:1337/}}\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf14 \cb9 \expnd0\expndtw0\kerning0
+\CocoaLigature1 URL:\cf15 \cb11  \cf11 \cb9 https://dev-customer.yulu.bike/s/track-ride-real-time \cf14 // these url\cb1 \
+\cb9 Method: \cf16 POST	// these are post request select post in postman\cf14 \cb1 \
+\cb9 Protocol: h2\cb1 \
+\cb9 Status: Complete\cb1 \
+\cb9 Response: 200 \cb1 \
+\cb9 SSL: Yes\cb1 \
+\
+\cb9 Request time: Wed Sep 21 18:42:49 GMT+05:30 2022\cb1 \
+\cb9 Response time: Wed Sep 21 18:42:49 GMT+05:30 2022\cb1 \
+\cb9 Duration: 198 ms\cb1 \
+\
+\cb9 Request size: 618 B\cb1 \
+\cb9 Response size: 129 B\cb1 \
+\cb9 Total size: 747 B\cb1 \
+\
+\cb9 ---------- Request ----------\cb1 \
+\
+\cf10 // these are jwt token\
+\cf14 \
+\
+\cb9 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTE2NzE3NCwidXNlcl90eXBlIjoicmlkZXIiLCJpYXQiOjE2NjMyMjUzOTQsImV4cCI6MTY2NTgxNzM5NH0.gfpt7yZjHXKVBhAw1md4RVft5kvzQRhYqtAG_UPSY-s\cb1 \
+\cb9 Accept-Language: en\cb1 \
+\
+\cb9 \{\cb1 \
+\cb9   "accuracy": 0.0,\cb1 \
+\cb9   "journey_id": "44609794",\cb1 \
+\cb9   "latitude": 12.929758071899414,\cb1 \
+\cb9   "longitude": 77.68680572509766,\cb1 \
+\cb9   "os_type": "Android",\cb1 \
+\cb9   "source": "mobile",\cb1 \
+\cb9   "appVersion": "android_4.4.0.8-dev",\cb1 \
+\cb9   "deviceId": "ca1ce1e4017d55c6",\cb1 \
+\cb9   "deviceName": "samsung SM-J810G",\cb1 \
+\cb9   "deviceVersion": "samsung SM-J810G 10 Q",\cb1 \
+\cb9   "fcmToken": "dqrOQGNpR_-HjnY2CdPy3F:APA91bERdlIQrze1bmbdWHeV1KtBiYou5TaEnqP41RWvQ6igqgm8-hp--qwcSs3pBVKSLSHrCLatAx6mKtuR3kc718G5pyY1UbnQBKTVfOJL0Uvn8JaTTIYWBrNheCTN8YwcnHaub-cR",\cb1 \
+\cb9   "locale": "en",\cb1 \
+\cb9   "map_zoom": 17.0,\cb1 \
+\cb9   "os_version": 29,\cb1 \
+\cb9   "time_stamp": 1663765969570,\cb1 \
+\cb9   "user_latitude": 12.929758071899414,\cb1 \
+\cb9   "user_longitude": 77.68680572509766,\cb1 \
+\cb9   "version_code": 4400023\cb1 \
+\cb9 \}\cb1 \
+\
+\cb9 ---------- Response ----------\cb1 \
+\
+\cb9 date: Wed, 21 Sep 2022 13:12:50 GMT\cb1 \
+\cb9 content-type: application/json; charset=utf-8\cb1 \
+\cb9 content-length: 129\cb1 \
+\cb9 server: nginx/1.16.1\cb1 \
+\cb9 vary: X-HTTP-Method-Override\cb1 \
+\cb9 x-powered-by: Sails <sailsjs.org>\cb1 \
+\cb9 etag: W/"81-mNnkxTFLNzWcf0RVHF9dIw"\cb1 \
+\cb9 set-cookie: sails.sid=s%3AcMcINmt8lr4RTIBIDtggBNEIrCEvTxqi.nTE4SJO33B%2FYobRzzDn4jo%2BF6%2Bkol2ZDi6wg0JeQd%2Fw; Path=/; HttpOnly\cb1 \
+\cb9 strict-transport-security: max-age=63072000; includeSubdomains\cb1 \
+\cb9 x-frame-options: DENY\cb1 \
+\cb9 x-content-type-options: nosniff\cb1 \
+\
+\cb9 \{\cb1 \
+\cb9   "status": 200,\cb1 \
+\cb9   "message": "done",\cb1 \
+\cb9   "rideEnded": false,\cb1 \
+\cb9   "onboard_bat_v": 0.35,\cb1 \
+\cb9   "estimatedDistanceMessage": "15-25 km"\cb1 \
+\cb9 \}\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+\
+\
+\
+\
+\
+}

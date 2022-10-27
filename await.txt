@@ -1,0 +1,18 @@
+Can’t use await in regular functions
+If we try to use await in a non-async function, there would be a syntax error:
+
+
+
+function f() {
+  let promise = Promise.resolve(1);
+  let result = await promise; // Syntax error
+}
+
+
+output;
+
+C:\Users\HP\Desktop\pavan\loops\practice.js:5
+    let result = await promise; // Syntax error
+                 ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules

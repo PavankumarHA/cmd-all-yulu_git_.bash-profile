@@ -1,0 +1,117 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red253\green128\blue8;\red251\green2\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c57637\c0;\cssrgb\c100000\c25279\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs26 \cf0 git pull origin main\
+  502  git status\
+  503  git checkout -b YUL-746-log-location // create new branch name\
+  504  clear\
+  505  git branch // check current branch\
+\
+\
+\
+History \
+\
+Git checkout YUL-746-log-location // checkout means add new branch like main or master or yup-746\
+\
+  501  git init\
+  502  git config --global user.name "pavankumar"				// confine our user name and email\
+  503  git config --global user.email "pavan.kumar@yulu.bike"\
+\
+  506  git status\
+  507  git commit -m "user location logs"\
+  508  git status\
+  509  git remote -v		// remote -v means check the current url path git\
+  510  git push origin YUL-746-log-location\
+  \
+  530  git checkout release/dev\
+  531  git status \
+  532  git pull origin release/dev\
+  533  git status\
+  534  git push origin release/dev\
+  535  git push origin YUL-746-log-location\
+  536  git remote show origin\
+\
+  537  less ./.git/config \
+  538  git push origin YUL-746-log-location\
+  539  git checkout release/dev\
+  540  git pull origin release/dev\
+\
+  541  git merge YUL-746-log-location\
+  542  git status\
+\
+  543  git add .\
+  544  git commit -m "user location logs"\
+  545  git status\
+  546  node app.js\
+\
+\
+\cf2 git log		\cf0  // these shows security key or code like this 2d95c6f2080d518d7f7cbb48021b023e1d19c965 when we r commit 3 times we commit \
+\
+commit 2d95c6f2080d518d7f7cbb48021b023e1d19c965 (HEAD -> release/dev)\
+Author: pavankumar <pavan.kumar@yulu.bike>\
+Date:   Wed Sep 21 12:05:51 2022 +0530\
+\
+    user location logs\
+\
+commit 74ab491cc89cf73fef6c3660023fee6621b2c207\
+Merge: d5f2f3322 36a172843\
+Author: pavankumar <pavan.kumar@yulu.bike>\
+Date:   Tue Sep 20 16:09:48 2022 +0530\
+\
+    user location logs\
+\
+commit d5f2f33227cbf8ff3ece784228d881c3eb9fb421\
+:\
+\
+\
+\
+\
+\
+Before push the code to repository first pull the code ofter that push the code\
+\
+
+\f1\b0 \
+\cf3 // create new branch\
+\cf0 \
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f0\b git checkout motor-controller-phase-2\
+
+\f1\b0 \
+error: pathspec 'motor-controller-phase-2' did not match any file(s) known to git\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$
+\f0\b  Git branch -b motor-controller-phase-2
+\f1\b0 \
+error: unknown switch `b'\
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]\
+   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]\
+   or: git branch [<options>] [-l] [<pattern>...]\
+\
+\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f0\b Git checkout -b motor-controller-phase-2\
+
+\f1\b0 Switched to a new branch 'motor-controller-phase-2'\
+pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f0\b git branch
+\f1\b0 \
+  YUL-746-log-location\
+  main\
+* motor-controller-phase-2\
+  release/dev\
+\
+\
+//// if u are going to checkout to the another branch error: it shows like changes commit and push ,,,do these thing\
+\
+\
+ pavans-MacBook-Pro:yulu-customer-app pavankumarha$  
+\f0\b git checkout api/controllers/v3/JourneysController.js\
+
+\f1\b0 \
+\
+  pavans-MacBook-Pro:yulu-customer-app pavankumarha$ 
+\f0\b  git checkout         api/services/HelperService.js}
